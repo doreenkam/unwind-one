@@ -846,7 +846,8 @@ form .options .list {
 .postBtn {
   width: 500px;
   height: 30px;
-  background-color: #7d88ff;
+  cursor: pointer;
+  background-color: #6491fb;
   color: rgb(255, 255, 255);
   font-size: 20spx;
   border-radius: 7px;
@@ -856,10 +857,8 @@ form .options .list {
   box-shadow: 0 0 20px #eee;
 }
 
-.postbtn:hover {
-  color: #fff;
-  cursor: pointer;
-  background-color: #ff9e27;
+.postBtn:hover {
+  background-color: #5e6eff;
 }
 
 textarea {

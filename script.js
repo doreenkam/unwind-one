@@ -5,7 +5,7 @@ function settingsMenuToggle() {
   settingsMenu.classList.toggle("settings-menu-height");
 }
 
-// ----------- Dark Mode Button ------------
+// ----------- Dark Mode Button ------------ //
 
 const darkBtn = document.getElementById("dark-btn");
 
@@ -30,22 +30,47 @@ if (localStorage.getItem("theme") == "light") {
   localStorage.setItem("theme", "light");
 }
 
-// ----------- Reaction Button Functions ------------
+// ----------- Reaction Button Functions ------------ //
 
 const likeBtn = document.querySelector(".like__btn");
-let likeIcon = document.querySelector("#icon"),
-  count = document.querySelector("#count");
+let likeIcon = document.querySelector("#icon");
+let count = document.querySelector("#count");
 
-let clicked = false;
+let clicked = true;
 
 likeBtn.addEventListener("click", () => {
-  if (!clicked) {
+  if (clicked) {
     clicked = true;
     likeIcon.innerHTML = `<i class="fas fa-thumbs-up"></i>`;
     count.textContent++;
   } else {
     clicked = false;
     likeIcon.innerHTML = `<i class="far fa-thumbs-up"></i>`;
-    count.textContent--;
   }
 });
+
+// --------------- Giphy Search Function ----------- //
+
+let gifLink = "";
+
+function sendApiRequest() {
+  let userInput = document.getElementById("input-giphy").value;
+  console.log(userInput);
+
+  const giphyApiKey = "01YtqfkM52wCXgAyJ2YbXdE2aoOyXPdF";
+
+  const giphyApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&api_key=${giphyApiKey}`;
+
+  fetch(giphyApiURL)
+    .then(function (data) {
+      return data.json();
+    })
+    .then(function (json) {
+      let index = Math.floor(Math.random() * json.data.length);
+      console.log(json.data[0].images.fixed_height.url);
+      let imagePath = json.data[index].images.fixed_height.url;
+      let gifImage = document.querySelector("#gifImage");
+      gifImage.setAttribute("src", imagePath);
+      gifLink = imagePath;
+    });
+}

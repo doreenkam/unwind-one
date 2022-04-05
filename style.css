@@ -902,3 +902,78 @@ textarea {
   top: 0;
   left: 0;
 }
+
+/* --------- Reaction Button ---------*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
+.heart-btn {
+  display: inline-block;
+  position: relative;
+
+  transform: translate(-50%, -50%);
+}
+
+.content.heart-active {
+  border-color: #000000;
+  background: #efefef;
+}
+.heart {
+  position: absolute;
+  background: url("/images/heart.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 90px;
+  width: 50px;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  margin-left: 15px;
+  margin-top: 8px;
+}
+
+.numb:before {
+  content: "12";
+  font-size: 12px;
+  margin-left: 20px;
+  font-weight: 500;
+  color: #000000;
+  font-family: sans-serif;
+}
+.numb.heart-active:before {
+  content: "13";
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.text.heart-active {
+  color: #000;
+}
+.heart.heart-active {
+  animation: animate 0.8s steps(28) 1;
+  background-position: right;
+}
+@keyframes animate {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/* Thumbs Up / Down */
+.thumbBtns {
+  cursor: pointer;
+  outline: 0;
+  color: rgb(81, 81, 81);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}

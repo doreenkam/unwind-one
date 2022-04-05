@@ -38,6 +38,28 @@ nav {
   z-index: 100;
 }
 
+li {
+  text-decoration: none;
+}
+
+ul  img {
+  filter:  brightness(0) invert(1);
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ul li a img {
+  height: 35px;
+  width: 35px;
+}
+
+.nav-item,
+.nav-item a {
+  padding: 5px 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo {
   width: 90px;
   margin-right: 55px;

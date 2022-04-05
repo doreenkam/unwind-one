@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <div class="logo">unwind</div>
+            <ul>
+                <li>About |</li>
+                <li>Submissions |</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <!-- Search Bar & User Icon on NavBar-->
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="images/user.png">
+            </div>
+
+        </div>
+        <!-- ------ Drop Down Menu on User Icon ---------->
+        <div class="settings-menu">
+            <div id="dark-btn">
+                <span></span>
+            </div>
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="images/user.png">
+                    <div>
+                        <p>Anonymous</p>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="settings-links">
+                    <img src="images/setting.png" class="settings-icon">
+                    <a href="">Settings & Privacy <img src="images/arrow.png" width="10px"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/help.png" class="settings-icon">
+                    <a href="">Help & Support <img src="images/arrow.png" width="10px"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Fixed Navigation Bar Ends -->
+
+    <!-- FIRST SECTION -->
+    <!-- Stories -->
+    <div class="container">
+        <div class="left-sidebar"></div>
+
+        <div class="main-content">
+            <div class="story-gallery">
+                <div class="story story1">
+                    <img src="images/circle.png">
+                    <p>Post Story</p>
+                </div>
+                <div class="story story2">
+                    <img src="images/gym.webp" alt="uploadIcon">
+                    <p> Gym </p>
+                </div>
+
+                <div class="story story3">
+                    <img src="images/health.png" alt="uploadIcon">
+                    <p> Healthy Food </p>
+                </div>
+
+                <div class="story story4">
+                    <img src="images/art.webp" alt="uploadIcon">
+                    <p> Get Creative </p>
+                </div>
+
+                <div class="story story5">
+                    <img src="images/active.jpeg" alt="uploadIcon">
+                    <p> Staying Active </p>
+                </div>
+            </div>
+            <!-- End of Stories -->
+
+
+            <!-- Write New Posts -->
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="images/user.png">
+                    <div>
+                        <p>Anonymous #16</p>
+                    </div>
+                </div>
+
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="What's on your mind?"></textarea>
+
+                    <div class="add-post-links">
+                        <button class="postBtn">Post</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of New Posts -->
+
+            <!-- Posts on the Site -->
+            <!-- Post One -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/iconAnon.png">
+                        <div>
+                            <p>Anonymous #15</p>
+                            <span>March 24 2022, 14:15 PM</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">After years of disliking the way I look, only now I realise I'm not ugly, I'm just
+                    not my type. Ugh! <a href=""> #NotFair</a></p>
+                <div class="post-row">
+                    <a href="#">View all comments</a>
+
+                    <!-- Where Our Reaction Buttons Will Go -->
+                    <div class="activity-icons">
+                        <div><img src="images/like-blue.png"> 60</div>
+                        <div><img src="images/comments.png"> X</div>
+                        <div><img src="images/share.png"> 20</div>
+
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/user.png"> <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/iconAnon.png">
+                        <div>
+                            <p>Anonymous #14</p>
+                            <span>March 24 2021, 13:40 PM</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">When people think about travelling to the past, they worry about accidentally
+                    changing the present, but no one in the present really thinks they can radically change the future.
+                    How does that even make sense?</p>
+                <img src="images/post2.jpeg" class="post-img">
+                <div class="post-row">
+                    <a href="#">View all comments</a>
+                    <div class="activity-icons">
+                        <div><img src="images/like.png"> 100</div>
+                        <div><img src="images/comments.png"> 55</div>
+                        <div><img src="images/share.png"> 10</div>
+                        <div class="options">
+                            <ul class="list">
+                                <li><img src="icons/giphy.svg" alt="giphy"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/iconAnon.png">
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+                <br>
+                <div class="form-container">
+                    <form>
+                        <h4>Comment:</h4>
+                        <div>
+                            <textarea name="comments" class="comments" cols="90"
+                                rows="3">Share your thoughts here!</textarea>
+                        </div>
+                        <input class="commentBtn" type="submit" value="Post">
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/iconAnon.png">
+                        <div>
+                            <p>Anonymous #13</p>
+                            <span>March 24 2022, 12:45 PM</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">What if Earth is like one of those uncontacted tribes in South America,like the
+                    whole Galaxy knows we're here but they've agreed not to contact us until we figure it out for
+                    ourselves?</p>
+                </p>
+                <img src="images/alien-meme.jpeg" class="post-img">
+                <div class="post-row">
+                    <a href="#">View all comments</a>
+                    <div class="activity-icons">
+                        <div><img src="images/like.png"> 11</div>
+                        <div><img src="images/comments.png"> 10</div>
+                        <div><img src="images/share.png"> 2</div>
+                        <div class="options">
+                            <ul class="list">
+                                <li><img src="icons/giphy.svg" alt="giphy"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/iconAnon.png">
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+                <br>
+                <div class="form-container">
+                    <form>
+                        <h4>Comment:</h4>
+                        <div>
+                            <textarea name="comments" class="comments" cols="90"
+                                rows="3">Share your thoughts here!</textarea>
+                        </div>
+                        <input class="commentBtn" type="submit" value="Post">
+                    </form>
+                </div>
+
+            </div>
+
+
+
+            <button type="button" class="load-more-btn">Load More</button>
+
+        </div>
+        <!-- ----------right sidebar----------- -->
+        <div class="right-sidebar">
+
+            <div class="sidebar-title">
+                <h4>Advertisement Here</h4>
+                <a href="#">Close</a>
+            </div>
+            <img src="images/advert.png" class="sidebar-ad">
+
+            <div class="sidebar-title">
+                <h4>Random Quotes Here</h4>
+                <a href="#">Close</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <p>Unwind Copyright © 2022</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

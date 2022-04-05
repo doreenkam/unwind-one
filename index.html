@@ -14,10 +14,12 @@
     <nav>
         <div class="nav-left">
             <div class="logo">unwind</div>
-            <ul>
-                <li>About |</li>
-                <li>Submissions |</li>
-                <li>Contact</li>
+            <ul class="filter">
+                <li><a href="#"><img src="images/notif.png" alt="notifIcon"> </a></li>
+                <li><a href="#"><img src="images/inbox.png" alt="imagesIcon"> </a></li>
+                <li>
+                <li><a href="#"><img src="images/stories.png" alt="storiesIcon"> </a></li>
+                </li>
             </ul>
         </div>
 
@@ -94,6 +96,7 @@
 
 
             <!-- Write New Posts -->
+            <form>
             <div class="write-post-container">
                 <div class="user-profile">
                     <img src="images/user.png">
@@ -103,12 +106,14 @@
                 </div>
 
                 <div class="post-input-container">
+                    
                     <textarea rows="3" placeholder="What's on your mind?"></textarea>
 
                     <div class="add-post-links">
-                        <button class="postBtn">Post</button>
+                        <button type="submit" class="postBtn" value="Post">Post</button>
                     </div>
                 </div>
+        
             </div>
             <!-- End of New Posts -->
 

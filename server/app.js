@@ -4,12 +4,7 @@ const cors = require("cors");
 app.use(cors());
 
 // Index route
-app.get("/", (req, res) => res.send("Hello World!"));
-
-// Route for retrieving all quotees
-app.get("/messages", (req, res) => {
-  res.send(messages);
-});
+app.get("/", (req, res) => res.send("Our message board's API is running 👩🏾‍💻"));
 
 // Route for getting quotes by ID & haandling out of range IDs
 // app.get("/messages/:id", (req, res) => {
@@ -17,7 +12,7 @@ app.get("/messages", (req, res) => {
 //   const msgId = req.params.id - 1;
 //   const selectedMsg = messages[msgId];
 //   if (!selectedMsg) {
-//     res.status(404).send(`404 ERROR: Pick a number between 1 & 15`);
+//     res.status(404).send(`404 ERROR`);
 //   } else {
 //     res.send(selectedMsg);
 //   }

@@ -982,7 +982,8 @@ form .options .list {
 .postBtn {
   width: 500px;
   height: 30px;
-  background-color: #7d88ff;
+  cursor: pointer;
+  background-color: #6491fb;
   color: rgb(255, 255, 255);
   font-size: 20spx;
   border-radius: 7px;
@@ -993,6 +994,7 @@ form .options .list {
 }
 
 .postBtn:hover {
+  background-color: #5e6eff;
   color: #fff;
   cursor: pointer;
   background-color: #ff9e27;
@@ -1038,4 +1040,36 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.commentIcon {
+  position: relative;
+  right: 278px;
+  top: 4px;
+}
+
+.viewComments {
+  position: relative;
+  left: 50px;
+  color: #5e6eff;
+}
+
+/* --------- Reaction Button ---------*/
+
+.like__btn {
+  position: relative;
+  left: 175px;
+  height: 30px;
+  padding: 5px 5px 5px 10px;
+  background: #ff5656;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.like__btn:hover {
+  background: #ff3232;
 }

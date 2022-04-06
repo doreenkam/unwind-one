@@ -1,3 +1,5 @@
+const { format } = require("express/lib/response");
+
 // ----------- Settings Button ------------
 const settingsMenu = document.querySelector(".settings-menu");
 
@@ -116,3 +118,80 @@ function commentSection(form, data, section) {
     commentSection.append(commentWrapper);
   });
 }
+
+
+
+// ------------------- POST INTO ARRAY BUTTON ------------------ //
+
+const form = document.getElementById('postForm');
+const title = document.getElementById('titleForm');
+const date = document.getElementById('dateForm');
+const content = document.getElementById('contentForm');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const title = event.target.titleForm.value;
+  const date = event.target.dateForm.value;
+  const content = event.target.contentForm.value;
+
+  submitPost(title, date, content);
+  alert('Unwind Post Submitted!');
+  form.reset();
+  redirectHome();
+});
+
+function submitPost(title, date, content) {
+  const newPostElements = {
+    title: title,
+    date: date,
+    content: content,
+  };
+
+  const options = {
+    method: "POST",
+    body: JSON.stringify(newPostElements)
+  };
+
+  fetch("http://localhost:3001/posts", options);
+}
+
+function redirectHome() {
+  window.location.href = 'index.html';
+}
+
+
+
+// ------------------- PULL FROM ARRAY ---------------///
+
+fetch('http://localhost:3001/posts')
+  .then((r) => r.json())
+  .then((data) => displayPosts(data));
+
+function displayPosts(posts) {
+  for (post of posts) {
+    //NEW POST
+    const newPost = document.createElement(`newPost`);
+    newPost.setAttribute("id", `post${post.id}`);
+    document.getElementById('postSection').append(newPost);
+
+    //TITLE OF NEW POST
+    const title = document.createElement('h4');
+    title.setAttribute('id', `title${post.id}`);
+    title.textContent = post.title;
+    newPost.append(title);
+
+    //DATE OF NEW POST
+    const date = document.createElement('span');
+    date.setAttribute('id', `date${post.id}`);
+    date.textContent = post.date;
+    newPost.append(date);
+
+    //CONTENT OF NEW POST
+    const content = document.createElement('p');
+    content.setAttribute('id', `content${post.id}`);
+    content.textContent = post.content;
+    newPost.append(content);
+  }
+}
+
+// ------ END OF FUNCTION TO FETCH FROM ARRAY ------ //

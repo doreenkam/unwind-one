@@ -98,22 +98,23 @@
             <!-- Write New Posts -->
 
             <div class="write-post-container">
-                <form>
+                <form id="postForm">
                     <div class="user-profile">
                         <img src="images/user.png">
                         <div>
-                            <p>Anonymous #16</p>
+                            <p id="titleForm">Anonymous #16</p>
+                            <span id="dateForm">April 8, 2022, 15:15pm</span>
                         </div>
                     </div>
 
                     <div class="post-input-container">
                         <!-- Giphy shows up in textarea -->
                         <img id="gifImage" alt="" class="center">
-                        <textarea rows="3" placeholder="What's on your mind? (max. 150 characters)"
+                        <textarea id="contentForm" rows="3" placeholder="What's on your mind? (max. 150 characters)"
                             maxlength="150"></textarea>
 
                         <div class="add-post-links">
-                            <button type="submit" class="postBtn" value="Post">Post</button>
+                            <button type="submit" onlclick="location.reload()" class="postBtn" id="getPosts" value="Post">Post</button>
                         </div>
                     </div>
                 </form>
@@ -123,10 +124,55 @@
 
             </div>
 
-
             <!-- End of New Posts -->
 
+
+
             <!-- Posts on the Site -->
+            
+            <!----- POST THAT LOOPS THROUGH ARRAY ------>
+            <div class="post-container">
+                <div class="post-row" id="postSection">
+                    <div class="user-profile">
+                        <img src="images/iconAnon.png">
+                        <div>
+
+                            <!-- <p id="title"></p>
+                            <span id="date"></span> -->
+
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+
+                <!-- <p class="post-text" id="content"></p> -->
+
+                <div class="post-row">
+
+                    <a href="#" style="color: salmon; position: relative; left: 50px;">View all
+                        comments</a>
+
+                    <!-- Where Our Reaction Buttons Will Go -->
+                    <div class="activity-icons">
+
+                        <div class="commentIcon"><img src="images/comments.png">5</div>
+                        <div class="like__btn">
+                            <p>
+                                <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                                <span id="count">5 </span> Likes
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/user.png"> <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+
+            </div>
+            <!---- END OF LOOPING POSTS ----->
+            
+            
+            
             <!-- Post One -->
             <div class="post-container">
                 <div class="post-row">

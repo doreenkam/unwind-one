@@ -92,33 +92,36 @@ function sendApiRequest() {
 // ---------- Comment Section ----------- //
 
 function commentSection(form, data, section) {
-  const form = document.createElement("form");
-  form.setAttribute("class", "comment-form");
-  form.setAttribute("name", data.id);
+  const form3 = document.createElement("form");
+  form3.setAttribute("class", "comment-form");
+  form3.setAttribute("name", data.id);
 
   const header = document.createElement("h4");
   header.textContent = "Comment";
 
   const textArea = document.createElement("textarea");
   textArea.setAttribute("class", "comment-input");
-  form.setAttribute("name", "comment");
-  form.setAttribute("cols", "90");
-  form.setAttribute("rows", "3");
-  form.setAttribute("placeholder", "Share your thoughts!");
+  textArea.setAttribute("id", "commentForm");
+
+  form3.setAttribute("name", "comment");
+  form3.setAttribute("cols", "90");
+  form3.setAttribute("rows", "3");
+  form3.setAttribute("placeholder", "Share your thoughts!");
 
   const input = document.createElement("input");
   input.setAttribute("type", "submit");
   input.setAttribute("class", "fa button send-comment");
   input.setAttribute("value", "send comment");
 
-  const commentSection = document.createElement("section");
-  commentSection.setAttribute("class", "comment-section");
+  // const commentSection = document.createElement("section");
+  section.setAttribute("class", "comment-section");
+  section.setAttribute("id", "comment-section");
 
   // append form to new post section
-  form.append(textArea);
-  form.append(header);
-  form.append(input);
-  commentSection.append(form);
+  form3.append(textArea);
+  form3.append(header);
+  form3.append(input);
+  commentSection.append(form3);
 
   let commentWrapper = document.querySelector("section.comment-section");
   commentWrapper.setAttribute("name", data.id);
@@ -131,51 +134,53 @@ function commentSection(form, data, section) {
   });
 }
 
-
-
 // ------------------- POST INTO ARRAY BUTTON ------------------ //
 
-const form = document.getElementById('postForm');
-const title = document.getElementById('titleForm');
-const date = document.getElementById('dateForm');
-const content = document.getElementById('contentForm');
+const form = document.getElementById("postForm");
+const title = document.getElementById("titleForm");
+const date = document.getElementById("dateForm");
+const content = document.getElementById("contentForm");
+const gif = document.getElementById("gifImage");
+const comments = document.getElementById("commentForm");
 
-form.addEventListener('submit', (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   const title = event.target.titleForm.value;
   const date = event.target.dateForm.value;
   const content = event.target.contentForm.value;
+  const gif = event.target.gifImage.value;
+  const comments = event.target.commentForm.value;
 
-  submitPost(title, date, content);
-  alert('Unwind Post Submitted!');
+  submitPost(title, date, content, gif, comments);
+  alert("Unwind Post Submitted!");
   form.reset();
   redirectHome();
 });
 
-function submitPost(title, date, content) {
+function submitPost(title, date, content, gif, comments) {
   const newPostElements = {
     title: title,
     date: date,
     content: content,
+    gif: gif,
+    commments: comments,
   };
 
   const options = {
     method: "POST",
-    body: JSON.stringify(newPostElements)
+    body: JSON.stringify(newPostElements),
   };
 
-  fetch("http://localhost:3001/posts", options);
+  fetch("http://localhost:3001/post", options);
 }
 
 function redirectHome() {
-  window.location.href = 'index.html';
+  window.location.href = "index.html";
 }
-
-
 
 // ------------------- PULL FROM ARRAY ---------------///
 
-fetch('http://localhost:3001/posts')
+fetch("http://localhost:3001/post")
   .then((r) => r.json())
   .then((data) => displayPosts(data));
 
@@ -184,25 +189,26 @@ function displayPosts(posts) {
     //NEW POST
     const newPost = document.createElement(`newPost`);
     newPost.setAttribute("id", `post${post.id}`);
-    document.getElementById('postSection').append(newPost);
+    document.getElementById("postSection").append(newPost);
 
     //TITLE OF NEW POST
-    const title = document.createElement('h4');
-    title.setAttribute('id', `title${post.id}`);
+    const title = document.createElement("h4");
+    title.setAttribute("id", `title${post.id}`);
     title.textContent = post.title;
     newPost.append(title);
 
     //DATE OF NEW POST
-    const date = document.createElement('span');
-    date.setAttribute('id', `date${post.id}`);
+    const date = document.createElement("span");
+    date.setAttribute("id", `date${post.id}`);
     date.textContent = post.date;
     newPost.append(date);
 
     //CONTENT OF NEW POST
-    const content = document.createElement('p');
-    content.setAttribute('id', `content${post.id}`);
+    const content = document.createElement("p");
+    content.setAttribute("id", `content${post.id}`);
     content.textContent = post.content;
     newPost.append(content);
+    
   }
 }
 

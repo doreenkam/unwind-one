@@ -54,6 +54,7 @@ likeBtn.addEventListener("click", () => {
 let gifLink = "";
 
 function sendApiRequest() {
+
   let userInput = document.getElementById("input-giphy").value;
   console.log(userInput);
 

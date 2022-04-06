@@ -96,8 +96,9 @@
 
 
             <!-- Write New Posts -->
-            <form>
-                <div class="write-post-container">
+
+            <div class="write-post-container">
+                <form>
                     <div class="user-profile">
                         <img src="images/user.png">
                         <div>
@@ -106,7 +107,8 @@
                     </div>
 
                     <div class="post-input-container">
-
+                        <!-- Giphy shows up in textarea -->
+                        <img id="gifImage" alt="" class="center">
                         <textarea rows="3" placeholder="What's on your mind? (max. 150 characters)"
                             maxlength="150"></textarea>
 
@@ -114,163 +116,167 @@
                             <button type="submit" class="postBtn" value="Post">Post</button>
                         </div>
                     </div>
+                </form>
 
+                <input type="text" id="input-giphy" placeholder="Search for GIFs">
+                <button class="giphyButton" onclick="sendApiRequest()"> Giphy! </button>
+            </div>
+
+
+            <!-- End of New Posts -->
+
+            <!-- Posts on the Site -->
+            <!-- Post One -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/iconAnon.png">
+                        <div>
+                            <p>Anonymous #15</p>
+                            <span>March 24 2022, 14:15 PM</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                 </div>
-                <!-- End of New Posts -->
+                <p class="post-text">After years of disliking the way I look, only now I realise I'm not ugly, I'm
+                    just
+                    not my type. Ugh! <a href=""> #NotFair</a></p>
+                <div class="post-row">
 
-                <!-- Posts on the Site -->
-                <!-- Post One -->
-                <div class="post-container">
-                    <div class="post-row">
-                        <div class="user-profile">
-                            <img src="images/iconAnon.png">
-                            <div>
-                                <p>Anonymous #15</p>
-                                <span>March 24 2022, 14:15 PM</span>
-                            </div>
-                        </div>
-                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                    </div>
-                    <p class="post-text">After years of disliking the way I look, only now I realise I'm not ugly, I'm
-                        just
-                        not my type. Ugh! <a href=""> #NotFair</a></p>
-                    <div class="post-row">
+                    <a href="#" style="color: salmon; position: relative; left: 50px;">View all
+                        comments</a>
 
-                        <a href="#" style="color: salmon; position: relative; left: 50px;">View all
-                            comments</a>
+                    <!-- Where Our Reaction Buttons Will Go -->
+                    <div class="activity-icons">
 
-                        <!-- Where Our Reaction Buttons Will Go -->
-                        <div class="activity-icons">
-
-                            <div class="commentIcon"><img src="images/comments.png">5</div>
-                            <div class="like__btn">
-                                <p>
-                                    <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                                    <span id="count">5 </span> Likes
-                                </p>
-                            </div>
-                        </div>
-                        <div class="post-profile-icon">
-                            <img src="images/user.png"> <i class="fas fa-caret-down"></i>
+                        <div class="commentIcon"><img src="images/comments.png">5</div>
+                        <div class="like__btn">
+                            <p>
+                                <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                                <span id="count">5 </span> Likes
+                            </p>
                         </div>
                     </div>
-
+                    <div class="post-profile-icon">
+                        <img src="images/user.png"> <i class="fas fa-caret-down"></i>
+                    </div>
                 </div>
 
+            </div>
 
-                <div class="post-container">
-                    <div class="post-row">
-                        <div class="user-profile">
-                            <img src="images/iconAnon.png">
-                            <div>
-                                <p>Anonymous #14</p>
-                                <span>March 24 2021, 13:40 PM</span>
-                            </div>
-                        </div>
-                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                    </div>
-                    <p class="post-text">When people think about travelling to the past, they worry about accidentally
-                        changing the present, but no one in the present really thinks they can radically change the
-                        future.
-                        How does that even make sense?</p>
-                    <img src="images/post2.jpeg" class="post-img">
-                    <div class="post-row">
-                        <a href="#" style="position: relative; left: 50px;">View all comments</a>
 
-                        <!-- Where Our Reaction Buttons Will Go -->
-                        <div class="activity-icons">
-
-                            <div class="commentIcon"><img src="images/comments.png">3</div>
-                            <div class="like__btn">
-                                <p>
-                                    <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                                    <span id="count">5 </span> Likes
-                                </p>
-                            </div>
-                        </div>
-                        <div class="post-profile-icon">
-                            <img src="images/user.png"> <i class="fas fa-caret-down"></i>
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/iconAnon.png">
+                        <div>
+                            <p>Anonymous #14</p>
+                            <span>March 24 2021, 13:40 PM</span>
                         </div>
                     </div>
-                    <div class="form-container">
-                        <br>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">When people think about travelling to the past, they worry about accidentally
+                    changing the present, but no one in the present really thinks they can radically change the
+                    future.
+                    How does that even make sense?</p>
+                <img src="images/post2.jpeg" class="post-img">
+                <div class="post-row">
+                    <a href="#" style="position: relative; left: 50px;">View all comments</a>
+
+                    <!-- Where Our Reaction Buttons Will Go -->
+                    <div class="activity-icons">
+
+                        <div class="commentIcon"><img src="images/comments.png">3</div>
+                        <div class="like__btn">
+                            <p>
+                                <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                                <span id="count">5 </span> Likes
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/user.png"> <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <br>
+                    <h4>Comment:</h4>
+                    <div>
+                        <textarea name="comments" class="comments" cols="90"
+                            rows="3">Share your thoughts here!</textarea>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/iconAnon.png">
+                        <div>
+                            <p>Anonymous #13</p>
+                            <span>March 24 2022, 12:45 PM</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">What if Earth is like one of those uncontacted tribes in South America,like the
+                    whole Galaxy knows we're here but they've agreed not to contact us until we figure it out for
+                    ourselves?</p>
+                </p>
+                <img src="images/alien-meme.jpeg" class="post-img">
+                <div class="post-row">
+                    <a href="#" class="viewComments">View all comments</a>
+
+                    <!-- Where Our Reaction Buttons Will Go -->
+                    <div class="activity-icons">
+
+                        <div class="commentIcon"><img src="images/comments.png">10</div>
+                        <div class="like__btn">
+                            <p>
+                                <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                                <span id="count">5 </span> Likes
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/user.png"> <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+                <br>
+                <div class="form-container">
+                    <form>
                         <h4>Comment:</h4>
                         <div>
                             <textarea name="comments" class="comments" cols="90"
                                 rows="3">Share your thoughts here!</textarea>
                         </div>
-                        <!--- Giphy --->
-            </form>
-        </div>
-
-    </div>
-
-    <div class="post-container">
-        <div class="post-row">
-            <div class="user-profile">
-                <img src="images/iconAnon.png">
-                <div>
-                    <p>Anonymous #13</p>
-                    <span>March 24 2022, 12:45 PM</span>
+                        <input class="commentBtn" type="submit" value="Post">
+                    </form>
                 </div>
+
             </div>
-            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+
+
+
+            <button type="button" class="load-more-btn">Load More</button>
+
         </div>
-        <p class="post-text">What if Earth is like one of those uncontacted tribes in South America,like the
-            whole Galaxy knows we're here but they've agreed not to contact us until we figure it out for
-            ourselves?</p>
-        </p>
-        <img src="images/alien-meme.jpeg" class="post-img">
-        <div class="post-row">
-            <a href="#" class="viewComments">View all comments</a>
+        <!-- ----------right sidebar----------- -->
+        <div class="right-sidebar">
 
-            <!-- Where Our Reaction Buttons Will Go -->
-            <div class="activity-icons">
-
-                <div class="commentIcon"><img src="images/comments.png">10</div>
-                <div class="like__btn">
-                    <p>
-                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                        <span id="count">5 </span> Likes
-                    </p>
-                </div>
+            <div class="sidebar-title">
+                <h4>Advertisement Here</h4>
+                <a href="#">Close</a>
             </div>
-            <div class="post-profile-icon">
-                <img src="images/user.png"> <i class="fas fa-caret-down"></i>
+            <img src="images/advert.png" class="sidebar-ad">
+
+            <div class="sidebar-title">
+                <h4>Random Quotes Here</h4>
+                <a href="#">Close</a>
             </div>
         </div>
-        <br>
-        <div class="form-container">
-            <form>
-                <h4>Comment:</h4>
-                <div>
-                    <textarea name="comments" class="comments" cols="90" rows="3">Share your thoughts here!</textarea>
-                </div>
-                <input class="commentBtn" type="submit" value="Post">
-            </form>
-        </div>
-
-    </div>
-
-
-
-    <button type="button" class="load-more-btn">Load More</button>
-
-    </div>
-    <!-- ----------right sidebar----------- -->
-    <div class="right-sidebar">
-
-        <div class="sidebar-title">
-            <h4>Advertisement Here</h4>
-            <a href="#">Close</a>
-        </div>
-        <img src="images/advert.png" class="sidebar-ad">
-
-        <div class="sidebar-title">
-            <h4>Random Quotes Here</h4>
-            <a href="#">Close</a>
-        </div>
-    </div>
     </div>
 
 

@@ -120,6 +120,7 @@
 
                 <input type="text" id="input-giphy" placeholder="Search for GIFs">
                 <button class="giphyButton" onclick="sendApiRequest()"> Giphy! </button>
+
             </div>
 
 
@@ -143,23 +144,38 @@
                     not my type. Ugh! <a href=""> #NotFair</a></p>
                 <div class="post-row">
 
-                    <a href="#" style="color: salmon; position: relative; left: 50px;">View all
-                        comments</a>
+                    <!-- <a href="#" style="color: salmon; position: relative; left: 50px;">View all
+                        comments</a> -->
 
                     <!-- Where Our Reaction Buttons Will Go -->
-                    <div class="activity-icons">
+                    <!-- <form class="reactions" name="14">
+                        <div class="emoji-div happy-div unselected not-chosen"><label for="like"
+                                class="happy">0</label><input id="emoji" name="dislike" type="submit" value="👍"></div>
 
-                        <div class="commentIcon"><img src="images/comments.png">5</div>
-                        <div class="like__btn">
-                            <p>
-                                <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                                <span id="count">5 </span> Likes
-                            </p>
-                        </div>
-                    </div>
-                    <div class="post-profile-icon">
-                        <img src="images/user.png"> <i class="fas fa-caret-down"></i>
-                    </div>
+                        <div class="emoji-div sad-div unselected not-chosen"><label for="dislike"
+                                class="sad">0</label><input id="emoji" name="dislike" type="submit" value="👎"></div>
+                        <div class="emoji-div third-div unselected not-chosen"><label for="happy"
+                                class="third">0</label><input id="emoji" name="happy" type="submit" value="😃"></div>
+                    </form> -->
+
+
+                        <form class="comment-form">
+                            <h4>Comment:</h4>
+                            <textarea name="comment" class="comment_input" cols="90"
+                                rows="3" placeholder="Share your thoughts!"></textarea>
+
+                            <input type="submit" value="send comment" class="fa button send-comment">
+                        </form>
+
+                        <section class="comment-section">
+                        </section>
+
+                 
+
+
+                    <!-- <div class="post-profile-icon">
+                        <i class="fas fa-caret-down"></i>
+                    </div> -->
                 </div>
 
             </div>

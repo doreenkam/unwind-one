@@ -54,7 +54,6 @@ likeBtn.addEventListener("click", () => {
 let gifLink = "";
 
 function sendApiRequest() {
-
   let userInput = document.getElementById("input-giphy").value;
   console.log(userInput);
 
@@ -74,4 +73,46 @@ function sendApiRequest() {
       gifImage.setAttribute("src", imagePath);
       gifLink = imagePath;
     });
+}
+
+// ---------- Comment Section ----------- //
+
+function commentSection(form, data, section) {
+  const form = document.createElement("form");
+  form.setAttribute("class", "comment-form");
+  form.setAttribute("name", data.id);
+
+  const header = document.createElement("h4");
+  header.textContent = "Comment";
+
+  const textArea = document.createElement("textarea");
+  textArea.setAttribute("class", "comment-input");
+  form.setAttribute("name", "comment");
+  form.setAttribute("cols", "90");
+  form.setAttribute("rows", "3");
+  form.setAttribute("placeholder", "Share your thoughts!");
+
+  const input = document.createElement("input");
+  input.setAttribute("type", "submit");
+  input.setAttribute("class", "fa button send-comment");
+  input.setAttribute("value", "send comment");
+
+  const commentSection = document.createElement("section");
+  commentSection.setAttribute("class", "comment-section");
+
+  // append form to new post section
+  form.append(textArea);
+  form.append(header);
+  form.append(input);
+  commentSection.append(form);
+
+  let commentWrapper = document.querySelector("section.comment-section");
+  commentWrapper.setAttribute("name", data.id);
+
+  data.comment.forEach((comment) => {
+    const comments1 = document.createElement("p");
+    comments1.textContent = `${comment}`;
+    commentWrapper.append(comments1);
+    commentSection.append(commentWrapper);
+  });
 }

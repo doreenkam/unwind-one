@@ -1093,16 +1093,17 @@ textarea {
 
 /* Calendar Styling */
 
-.right-sidebar{
+.right-sidebar {
   font-family: 'poppins', sans-serif;
 }
-.event{
-  display:flex;
+
+.event {
+  display: flex;
   font-size: 14px;
   margin-bottom: 20px;
-} 
+}
 
-.left-event{
+.left-event {
   border-radius: 10px;
   height: 65px;
   width: 65px;
@@ -1110,37 +1111,37 @@ textarea {
   padding-top: 10px;
   text-align: centre;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.event p{
+.event p {
   font-size: 12px;
 }
 
-.event a{
+.event a {
   font-size: 12px;
   text-decoration: none;
   color: #1876f2;
 }
 
-.left-event span{
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
+.left-event span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background: #236AB9;
-  color:white;
-  font-size:10px;
-  padding:4px 0;
+  color: white;
+  font-size: 10px;
+  padding: 4px 0;
   text-align: center;
 }
 
-.left-event h3{
+.left-event h3 {
   text-align: center;
 }
 
-.right-event h4{
+.right-event h4 {
   font-size: 14px
 }
 
@@ -1164,3 +1165,25 @@ textarea {
 .like__btn:hover {
   background: #ff3232;
 }
+
+/* Emoji Styling */
+
+/* .emoji-div.selected {
+  background-color: red;
+} */
+
+.emoji-div {
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+  align-items: center;
+
+}
+
+#emoji {
+  border: none;
+  height: 30px;
+  width: 30px;  
+ 
+}
+

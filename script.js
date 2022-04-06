@@ -65,9 +65,11 @@ function reactionCount(button, count, id, type) {
 
 // --------------- Giphy Search Function ----------- //
 
+
 let gifLink = "";
 
-function sendApiRequest() {
+function sendApiRequest(){
+  
   let userInput = document.getElementById("input-giphy").value;
   console.log(userInput);
 
@@ -92,33 +94,33 @@ function sendApiRequest() {
 // ---------- Comment Section ----------- //
 
 function commentSection(form, data, section) {
-  const form = document.createElement("form");
-  form.setAttribute("class", "comment-form");
-  form.setAttribute("name", data.id);
+  const form3 = document.createElement("form");
+  form3.setAttribute("class", "comment-form");
+  form3.setAttribute("name", data.id);
 
   const header = document.createElement("h4");
   header.textContent = "Comment";
 
   const textArea = document.createElement("textarea");
   textArea.setAttribute("class", "comment-input");
-  form.setAttribute("name", "comment");
-  form.setAttribute("cols", "90");
-  form.setAttribute("rows", "3");
-  form.setAttribute("placeholder", "Share your thoughts!");
+  form3.setAttribute("name", "comment");
+  form3.setAttribute("cols", "90");
+  form3.setAttribute("rows", "3");
+  form3.setAttribute("placeholder", "Share your thoughts!");
 
   const input = document.createElement("input");
   input.setAttribute("type", "submit");
   input.setAttribute("class", "fa button send-comment");
   input.setAttribute("value", "send comment");
 
-  const commentSection = document.createElement("section");
-  commentSection.setAttribute("class", "comment-section");
+  // const commentSection = document.createElement("section");
+  section.setAttribute("class", "comment-section");
 
   // append form to new post section
-  form.append(textArea);
-  form.append(header);
-  form.append(input);
-  commentSection.append(form);
+  form3.append(textArea);
+  form3.append(header);
+  form3.append(input);
+  commentSection.append(form3);
 
   let commentWrapper = document.querySelector("section.comment-section");
   commentWrapper.setAttribute("name", data.id);

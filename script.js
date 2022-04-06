@@ -65,11 +65,9 @@ function reactionCount(button, count, id, type) {
 
 // --------------- Giphy Search Function ----------- //
 
-
 let gifLink = "";
 
-function sendApiRequest(){
-  
+function sendApiRequest() {
   let userInput = document.getElementById("input-giphy").value;
   console.log(userInput);
 
@@ -103,6 +101,8 @@ function commentSection(form, data, section) {
 
   const textArea = document.createElement("textarea");
   textArea.setAttribute("class", "comment-input");
+  textArea.setAttribute("id", "commentForm");
+
   form3.setAttribute("name", "comment");
   form3.setAttribute("cols", "90");
   form3.setAttribute("rows", "3");
@@ -115,6 +115,7 @@ function commentSection(form, data, section) {
 
   // const commentSection = document.createElement("section");
   section.setAttribute("class", "comment-section");
+  section.setAttribute("id", "comment-section");
 
   // append form to new post section
   form3.append(textArea);
@@ -133,51 +134,53 @@ function commentSection(form, data, section) {
   });
 }
 
-
-
 // ------------------- POST INTO ARRAY BUTTON ------------------ //
 
-const form = document.getElementById('postForm');
-const title = document.getElementById('titleForm');
-const date = document.getElementById('dateForm');
-const content = document.getElementById('contentForm');
+const form = document.getElementById("postForm");
+const title = document.getElementById("titleForm");
+const date = document.getElementById("dateForm");
+const content = document.getElementById("contentForm");
+const gif = document.getElementById("gifImage");
+const comments = document.getElementById("commentForm");
 
-form.addEventListener('submit', (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   const title = event.target.titleForm.value;
   const date = event.target.dateForm.value;
   const content = event.target.contentForm.value;
+  const gif = event.target.gifImage.value;
+  const comments = event.target.commentForm.value;
 
-  submitPost(title, date, content);
-  alert('Unwind Post Submitted!');
+  submitPost(title, date, content, gif, comments);
+  alert("Unwind Post Submitted!");
   form.reset();
   redirectHome();
 });
 
-function submitPost(title, date, content) {
+function submitPost(title, date, content, gif, comments) {
   const newPostElements = {
     title: title,
     date: date,
     content: content,
+    gif: gif,
+    commments: comments,
   };
 
   const options = {
     method: "POST",
-    body: JSON.stringify(newPostElements)
+    body: JSON.stringify(newPostElements),
   };
 
-  fetch("http://localhost:3001/posts", options);
+  fetch("http://localhost:3001/post", options);
 }
 
 function redirectHome() {
-  window.location.href = 'index.html';
+  window.location.href = "index.html";
 }
-
-
 
 // ------------------- PULL FROM ARRAY ---------------///
 
-fetch('http://localhost:3001/posts')
+fetch("http://localhost:3001/post")
   .then((r) => r.json())
   .then((data) => displayPosts(data));
 
@@ -186,25 +189,26 @@ function displayPosts(posts) {
     //NEW POST
     const newPost = document.createElement(`newPost`);
     newPost.setAttribute("id", `post${post.id}`);
-    document.getElementById('postSection').append(newPost);
+    document.getElementById("postSection").append(newPost);
 
     //TITLE OF NEW POST
-    const title = document.createElement('h4');
-    title.setAttribute('id', `title${post.id}`);
+    const title = document.createElement("h4");
+    title.setAttribute("id", `title${post.id}`);
     title.textContent = post.title;
     newPost.append(title);
 
     //DATE OF NEW POST
-    const date = document.createElement('span');
-    date.setAttribute('id', `date${post.id}`);
+    const date = document.createElement("span");
+    date.setAttribute("id", `date${post.id}`);
     date.textContent = post.date;
     newPost.append(date);
 
     //CONTENT OF NEW POST
-    const content = document.createElement('p');
-    content.setAttribute('id', `content${post.id}`);
+    const content = document.createElement("p");
+    content.setAttribute("id", `content${post.id}`);
     content.textContent = post.content;
     newPost.append(content);
+    
   }
 }
 

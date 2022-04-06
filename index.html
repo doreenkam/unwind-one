@@ -114,7 +114,8 @@
                             maxlength="150"></textarea>
 
                         <div class="add-post-links">
-                            <button type="submit" onlclick="location.reload()" class="postBtn" id="getPosts" value="Post">Post</button>
+                            <button type="submit" onlclick="location.reload()" class="postBtn" id="getPosts"
+                                value="Post">Post</button>
                         </div>
                     </div>
                 </form>
@@ -129,7 +130,7 @@
 
 
             <!-- Posts on the Site -->
-            
+
             <!----- POST THAT LOOPS THROUGH ARRAY ------>
             <div class="post-container">
                 <div class="post-row" id="postSection">
@@ -158,8 +159,20 @@
                         <div class="commentIcon"><img src="images/comments.png">5</div>
                         <div class="like__btn">
                             <p>
-                                <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                                <span id="count">5 </span> Likes
+                                <span id="like"><i class="far fa-thumbs-up"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                        <div class="dislike__btn">
+                            <p>
+                                <span id="dislike"><i class="fas fa-thumbs-down"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                        <div class="love__btn">
+                            <p>
+                                <span id="dislike"><i class="fas fa-heart"></i></span>
+                                <span id="count">0</span>
                             </p>
                         </div>
                     </div>
@@ -170,7 +183,7 @@
 
             </div>
             <!---- END OF LOOPING POSTS ----->
-        
+
             <!-- Post One -->
             <div class="post-container">
                 <div class="post-row">
@@ -203,18 +216,18 @@
                     </form> -->
 
 
-                        <form class="comment-form">
-                            <h4>Comment:</h4>
-                            <textarea name="comment" class="comment_input" cols="90"
-                                rows="3" placeholder="Share your thoughts!"></textarea>
+                    <form class="comment-form">
+                        <h4>Comment:</h4>
+                        <textarea name="comment" class="comment_input" cols="90" rows="3"
+                            placeholder="Share your thoughts!"></textarea>
 
-                            <input type="submit" value="send comment" class="fa button send-comment">
-                        </form>
+                        <input type="submit" value="send comment" class="fa button send-comment">
+                    </form>
 
-                        <section class="comment-section">
-                        </section>
+                    <section class="comment-section">
+                    </section>
 
-                 
+
 
 
                     <!-- <div class="post-profile-icon">

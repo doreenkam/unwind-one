@@ -147,7 +147,7 @@ ul li a img {
 }
 
 .left-sidebar {
-  flex-basis: 10%;
+  flex-basis: 5%;
   position: sticky;
   top: 70px;
   align-self: flex-start;
@@ -1032,7 +1032,6 @@ form .options .list {
   opacity: 0.7;
 }
 
-
 .postBtn:hover {
   opacity: 0.7;
 }
@@ -1087,14 +1086,13 @@ textarea {
 
 .viewComments {
   position: relative;
-  left: 50px;
-  color: #5e6eff;
+  left: 40px;
 }
 
 /* Calendar Styling */
 
 .right-sidebar {
-  font-family: 'poppins', sans-serif;
+  font-family: "poppins", sans-serif;
 }
 
 .event {
@@ -1130,7 +1128,7 @@ textarea {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #236AB9;
+  background: #236ab9;
   color: white;
   font-size: 10px;
   padding: 4px 0;
@@ -1142,15 +1140,33 @@ textarea {
 }
 
 .right-event h4 {
-  font-size: 14px
+  font-size: 14px;
 }
-
 
 /* --------- Reaction Button ---------*/
 
 .like__btn {
+  display: inline-block;
   position: relative;
-  left: 175px;
+  left: 160px;
+  height: 30px;
+  padding: 5px 5px 5px 10px;
+  background: #569aff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.like__btn:hover {
+  background: #32bbff;
+}
+
+.dislike__btn {
+  position: relative;
+  left: 128px;
   height: 30px;
   padding: 5px 5px 5px 10px;
   background: #ff5656;
@@ -1162,7 +1178,21 @@ textarea {
   cursor: pointer;
 }
 
-.like__btn:hover {
+.love__btn {
+  position: relative;
+  left: 98px;
+  height: 30px;
+  padding: 5px 5px 5px 10px;
+  background: #ff56ad;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.dislike__btn:hover {
   background: #ff3232;
 }
 
@@ -1177,13 +1207,10 @@ textarea {
   width: 70px;
   display: inline-block;
   align-items: center;
-
 }
 
 #emoji {
   border: none;
   height: 30px;
-  width: 30px;  
- 
+  width: 30px;
 }
-

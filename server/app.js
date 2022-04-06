@@ -38,7 +38,10 @@ app.post('/post/newpost', (re, res) => {
     id: posts.length,
     title: '',
     date: '',
-    content: ''
+    content: '',
+    gif: '',
+    reaction: '',
+    comments: ''
   };
 
 newPost.title += newPostContent.title;
@@ -59,7 +62,7 @@ app.get('/post/findpost', (res, req) => {
 });
 
 //-----> ADDING A COMMENT TO POST
-app.post('/post/new comment', (req, res) => {
+app.post('/post/newcomment', (req, res) => {
   const newCommentContent = JSON.parse(req.body); 
   const id = newCommentContent.id;
   const comment = newCommentContent.comment;
@@ -71,7 +74,7 @@ app.post('/post/new comment', (req, res) => {
 
 //----> DEFINING FUNCTIONS USED IN ENDPOINTS
 function readJSON() {
-  fs.readFile('./database.json', 'Anonymous #1', (err, jsonString) => {
+  fs.readFile('./database.json', (err, jsonString) => {
     if (err) {
       console.log('Error reading file from disk', err);
       return;

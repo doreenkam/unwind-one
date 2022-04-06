@@ -1,5 +1,3 @@
-const { format } = require("express/lib/response");
-
 // ----------- Settings Button ------------
 const settingsMenu = document.querySelector(".settings-menu");
 
@@ -42,14 +40,28 @@ let clicked = true;
 
 likeBtn.addEventListener("click", () => {
   if (clicked) {
-    clicked = true;
     likeIcon.innerHTML = `<i class="fas fa-thumbs-up"></i>`;
     count.textContent++;
   } else {
-    clicked = false;
     likeIcon.innerHTML = `<i class="far fa-thumbs-up"></i>`;
   }
 });
+
+// ===== REACTION ==== //
+
+const like = document.getElementById("like");
+const dislike = document.getElementById("dislike");
+const likeCount = document.getElementById("likeCount");
+const dislikeCount = document.getElementById("dislikeCount");
+
+function reactionCount(button, count, id, type) {
+  button.addEventListener("click", () => {
+    count += 1;
+    fetch(`http://localhost:3000/id=${id}`);
+    button.innerHTML = ` ${count}`;
+    button.disabled = true;
+  });
+}
 
 // --------------- Giphy Search Function ----------- //
 

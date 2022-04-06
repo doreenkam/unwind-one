@@ -1,12 +1,13 @@
 // --------------- SETUP --------------- //
-
 const express = require("express");
-const app = express();
 const cors = require("cors");
-const { json } = require("body-parser");
-const port = 3001;
+const bodyParser = require("body-parser");
+const fs = require("fs");
+const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(cors());
+
 app.use(express.json());
 
 // ---------------  REQUIRE ARRAY FROM JSON FILE  --------------- //

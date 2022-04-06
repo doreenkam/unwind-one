@@ -6,7 +6,7 @@ const fs = require("fs");
 const app = express();
 const port = process.env.PORT || 3000;
 
-const post = require("./database.json");
+const posts = require("./database.json");
 
 // ------ Reading JSON file and Writing JSON file for posts ------ //
 

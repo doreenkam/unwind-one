@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 let posts;
 let singlePostId;
 
-// --------------- CHANGE POSTS SUBMITTED FROM FRONTEND TO JSON AND ADD TO database.json --------------- //
+// --------------- Converts posts submitted from front-end to json and add to database.json --------------- //
 
 const saveDataJSON = () => {
   const err = (error) => {
@@ -25,7 +25,7 @@ const saveDataJSON = () => {
 // [null, 2] makes the file more readable in the json file
 // adds json stringified data to database.json and runs error function if there is an error
 
-// ---------------  READ JSON --------------- //
+// ---------------  Reads database.json and sends to front-end --------------- //
 
 const sendDataJSON = () => {
   fs.readFile("./database.json", "utf8", (err, jsonString) => {
@@ -90,15 +90,6 @@ app.get("/posts/:id", (req, res) => {
   } else {
     res.send({ Error: "Post does not exist" });
   }
-});
-
-// retrieve a single post endpoint
-app.get("/posts/:id", (req, res) => {
-  singlePostId = req.params.id;
-});
-
-app.get("/posts/singlepost", (req, res) => {
-  res.send(JSON.stringify(posts[singlePostId]));
 });
 
 // --------------- LISTEN TO SERVER --------------- //

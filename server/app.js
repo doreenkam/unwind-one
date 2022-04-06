@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const posts = require("./database.json");
-const { Z_ASCII } = require("zlib");
+
 // ------ Reading JSON file and Writing JSON file for posts ------ //
 
 const readJSON = () => {

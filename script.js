@@ -171,7 +171,7 @@ function submitPost(title, date, content, gif, comments) {
     body: JSON.stringify(newPostElements),
   };
 
-  fetch("http://localhost:3001/post", options);
+  fetch("http://localhost:3000/post", options);
 }
 
 function redirectHome() {
@@ -180,7 +180,7 @@ function redirectHome() {
 
 // ------------------- PULL FROM ARRAY ---------------///
 
-fetch("http://localhost:3001/post")
+fetch("http://localhost:3000/post")
   .then((r) => r.json())
   .then((data) => displayPosts(data));
 

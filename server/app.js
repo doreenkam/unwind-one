@@ -6,7 +6,7 @@ const fs = require("fs");
 const app = express();
 const port = process.env.PORT || 3000;
 
-const posts = require("./database.json");
+const post = require("./database.json");
 
 // ------ Reading JSON file and Writing JSON file for posts ------ //
 
@@ -75,7 +75,7 @@ app.get("/post/:id", (req, res) => {
 
 //----> NEW POST endpoint | ADDING TO DATABASE
 
-app.post("/messages", (req, res) => {
+app.post("/post", (req, res) => {
   posts.push(req.body);
   readJSON();
   res.json({ success: true });

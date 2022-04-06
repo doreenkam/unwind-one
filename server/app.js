@@ -5,95 +5,103 @@ const bodyParser = require("body-parser");
 const fs = require("fs");
 const app = express();
 const port = process.env.PORT || 3000;
-
 let posts;
-let singlePostId;
 
-// --------------- Converts posts submitted from front-end to json and add to database.json --------------- //
-
-const saveDataJSON = () => {
-  const err = (error) => {
-    if (error) {
-      console.error(err);
-      return;
-    }
-  };
-  const jsonData = JSON.stringify(postMessage, null, 2);
-  fs.writeFile("./database.json", jsonData, err);
-};
-
-// [null, 2] makes the file more readable in the json file
-// adds json stringified data to database.json and runs error function if there is an error
-
-// ---------------  Reads database.json and sends to front-end --------------- //
-
-const sendDataJSON = () => {
-  fs.readFile("./database.json", "utf8", (err, jsonString) => {
-    if (err) {
-      console.log("Error reading file from disk:", err);
-      return;
-    }
-    try {
-      posts = JSON.parse(jsonString);
-    } catch (err) {
-      posts = { error: `Error parsing JSON string:${err}` };
-    }
-  });
-};
-
-
-sendDataJSON();
+readJSON();
 app.use(cors());
-
 app.use(express.json());
+app.use(bodyParser.text());
 
-// ---------------  REQUIRE ARRAY FROM JSON FILE  --------------- //
+// -----------> LISTEN TO SERVER --------------- //
 
-const postMessage = require("./database.json");
-
-
-// ---------------  PUSHING THE FORM DATA FROM FRONTEND INTO postMessage VARIABLE AND WRITING THE postMessage VARIABLE BACK INTO input.json ---------------- //
-
-app.post("/messages", (req, res) => {
-  postMessage.push(req.body);
-  saveDataJSON();
-  res.json({ success: true });
+app.listen(port, () => {
+  console.log(`Unwind server running at http://localhost:${port}`);
 });
 
-// where to post to - messages endpoint
-app.post("/messages", (req, res) => {
-  console.log(req.body);
-  res.status(201).send(users);
-});
+// ------------> ROUTES --------------- //
 
-// --------------- GIPHY --------------- //
-
-// --------------- ROUTES --------------- //
-
-// main endpoint
+//----> main endpoint
 app.get("/", (req, res) => {
   res.send("SERVERSIDE DEPLOYED!");
 });
 
-// posts endpoint
-app.get("/posts", (req, res) => {
-  sendDataJSON();
-  res.send(postMessage);
+//----> JSON endpoint
+app.get("/post", (req, res) => {
+  readJSON();
+  res.send(posts);
 });
 
-//posts with specified id endpoint
-app.get("/posts/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  if (id > 0) {
-    const postId = req.params.id - 1;
-    res.send(postMessage[postId]);
-  } else {
-    res.send({ Error: "Post does not exist" });
-  }
+//----> NEW POST endpoint | ADDING TO DATABASE
+app.post('/post/newpost', (re, res) => {
+  const newPostContent = JSON.parse(req.body);
+  const newPost = {
+    id: posts.length,
+    title: '',
+    date: '',
+    content: ''
+  };
+
+newPost.title += newPostContent.title;
+newPost.date += newPostContent.date;
+newPost.content += newPostContent.content;
+posts.push(newPost);
+writeJSON(posts);
+readJSON();
+
 });
 
-// --------------- LISTEN TO SERVER --------------- //
-
-app.listen(port, () => {
-  console.log(`App on http://localhost:${port}`);
+//-----> PULLING POST FOR DATABASE endpoint
+app.get('/post/findpost', (res, req) => {
+  let id = req.query.id;
+  let type = req.query.type;
+  posts[id].reaction[type] += 1;
+  writeJSON(posts);
 });
+
+//-----> ADDING A COMMENT TO POST
+app.post('/post/new comment', (req, res) => {
+  const newCommentContent = JSON.parse(req.body); 
+  const id = newCommentContent.id;
+  const comment = newCommentContent.comment;
+  posts[id].comments.push(comment);
+  writeJSON(posts);
+});
+
+
+
+//----> DEFINING FUNCTIONS USED IN ENDPOINTS
+function readJSON() {
+  fs.readFile('./database.json', 'Anonymous #1', (err, jsonString) => {
+    if (err) {
+      console.log('Error reading file from disk', err);
+      return;
+    }
+    try {
+      posts = JSON.parse(jsonString);
+    }
+    catch (err) {
+      posts = {error: `Error parsing JSON string:${err}`};
+    }
+  });
+}
+
+function writeJSON(body) {
+  const jsonString = JSON.stringify(body);
+  fs.writeFile('./database.json', jsonString, (err) => {
+    err
+      ? console.log('Error writing file', err)
+      : console.log('Successfully written to database.json');
+  });
+}
+
+// ------> PLEASE CHECK ABOVE IN ENDPOINTS SECTION IF CORRENT FOR COMMENTS!
+
+
+
+
+// ------> GIPHY endpoint / API & function (if necessary)
+
+
+
+
+// -------> REACTION button endpoint & function (if necessary)

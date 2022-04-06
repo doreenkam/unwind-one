@@ -6,6 +6,43 @@ const fs = require("fs");
 const app = express();
 const port = process.env.PORT || 3000;
 
+let posts;
+let singlePostId;
+
+// --------------- CHANGE POSTS SUBMITTED FROM FRONTEND TO JSON AND ADD TO database.json --------------- //
+
+const saveDataJSON = () => {
+  const err = (error) => {
+    if (error) {
+      console.error(err);
+      return;
+    }
+  };
+  const jsonData = JSON.stringify(postMessage, null, 2);
+  fs.writeFile("./database.json", jsonData, err);
+};
+
+// [null, 2] makes the file more readable in the json file
+// adds json stringified data to database.json and runs error function if there is an error
+
+// ---------------  READ JSON --------------- //
+
+const sendDataJSON = () => {
+  fs.readFile("./database.json", "utf8", (err, jsonString) => {
+    if (err) {
+      console.log("Error reading file from disk:", err);
+      return;
+    }
+    try {
+      posts = JSON.parse(jsonString);
+    } catch (err) {
+      posts = { error: `Error parsing JSON string:${err}` };
+    }
+  });
+};
+
+
+sendDataJSON();
 app.use(cors());
 
 app.use(express.json());
@@ -14,27 +51,12 @@ app.use(express.json());
 
 const postMessage = require("./database.json");
 
-// --------------- CHANGE POSTS SUBMITTED FROM FRONTEND TO JSON AND ADD TO database.json --------------- //
-
-const saveData = () => {
-  const finished = (error) => {
-    if (error) {
-      console.error(err);
-      return;
-    }
-  };
-  const jsonData = JSON.stringify(postMessage, null, 2);
-  fs.writeFile("database.json", jsonData, finished);
-};
-
-// [null, 2] makes the file more readable in the json file
-// adds json stringified data to database.json and runs error function if there is an error
 
 // ---------------  PUSHING THE FORM DATA FROM FRONTEND INTO postMessage VARIABLE AND WRITING THE postMessage VARIABLE BACK INTO input.json ---------------- //
 
 app.post("/messages", (req, res) => {
   postMessage.push(req.body);
-  saveData();
+  saveDataJSON();
   res.json({ success: true });
 });
 
@@ -46,8 +68,6 @@ app.post("/messages", (req, res) => {
 
 // --------------- GIPHY --------------- //
 
-
-
 // --------------- ROUTES --------------- //
 
 // main endpoint
@@ -57,7 +77,28 @@ app.get("/", (req, res) => {
 
 // posts endpoint
 app.get("/posts", (req, res) => {
+  sendDataJSON();
   res.send(postMessage);
+});
+
+//posts with specified id endpoint
+app.get("/posts/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  if (id > 0) {
+    const postId = req.params.id - 1;
+    res.send(postMessage[postId]);
+  } else {
+    res.send({ Error: "Post does not exist" });
+  }
+});
+
+// retrieve a single post endpoint
+app.get("/posts/:id", (req, res) => {
+  singlePostId = req.params.id;
+});
+
+app.get("/posts/singlepost", (req, res) => {
+  res.send(JSON.stringify(posts[singlePostId]));
 });
 
 // --------------- LISTEN TO SERVER --------------- //

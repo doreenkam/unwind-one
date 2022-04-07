@@ -25,7 +25,9 @@
 }
 
 body {
-  background: var(--body-color);
+  /* background: #D4E4F7; */
+  background: rgb(35,106,185);
+  background: linear-gradient(207deg, rgba(35,106,185,1) 5%, rgba(252,115,7,1) 62%, rgba(52,28,9,1) 96%);
   transition: background 0.3s;
 }
 
@@ -33,7 +35,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--nav-color);
+  background: #341C09;
   padding: 5px 5%;
   position: sticky;
   top: 0;
@@ -65,7 +67,7 @@ ul li a img {
 .logo {
   width: 90px;
   margin-right: 55px;
-  color: white;
+  color: bisque;
   font-family: "Corben", cursive;
   font-size: 25px;
   font-weight: 900;
@@ -211,11 +213,13 @@ ul li a img {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 18px;
+  color: #341C09;
 }
 
 .right-sidebar h4 {
   font-weight: 600;
   font-size: 16px;
+  color: #341C09;
 }
 
 .sidebar-title a {
@@ -228,6 +232,7 @@ ul li a img {
   display: flex;
   font-size: 14px;
   margin-bottom: 20px;
+  color: #341C09;
 }
 
 .event-left {
@@ -654,7 +659,7 @@ form .options {
 
 .footer {
   text-align: center;
-  color: #000000;
+  color: #341C09;
   padding: 10px 0 20px;
   font-weight: 800;
   font-size: 13px;

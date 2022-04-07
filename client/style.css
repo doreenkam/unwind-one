@@ -175,7 +175,7 @@ ul li a img {
   position: sticky;
   top: 70px;
   align-self: flex-start;
-  color: #626262;
+  color: bisque;
   padding: 20px;
   border-radius: 4px;
 }
@@ -362,7 +362,7 @@ ul li a img {
   width: 43px;
   height: 40px;
   border-radius: 50%;
-  border: 3px solid #ffffff;
+  border: 3px solid bisque;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -373,7 +373,7 @@ ul li a img {
   bottom: 10px;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: bisque;
   font-size: 15px;
 }
 
@@ -494,7 +494,7 @@ ul li a img {
 }
 
 .post-text a {
-  color: #1876f2;
+  color: #236AB9;
   text-decoration: none;
 }
 
@@ -564,7 +564,7 @@ form .options {
 
 .user-profile a {
   font-size: 12px;
-  color: #1876f2;
+  color: #236AB9;
   text-decoration: none;
 }
 
@@ -698,7 +698,7 @@ form .options {
 }
 
 .pd-right button {
-  background: #1876f2;
+  background: #236AB9;
   border: 0;
   outline: 0;
   padding: 6px 10px;
@@ -801,7 +801,7 @@ form .options {
 
 .title-box a {
   text-decoration: none;
-  color: #1876f2;
+  color: #236AB9;
   font-size: 14px;
 }
 
@@ -1004,7 +1004,7 @@ form .options .list {
   width: 500px;
   height: 30px;
   cursor: pointer;
-  background-color: #6491fb;
+  background-color: #236AB9;
   color: rgb(255, 255, 255);
   font-size: 20spx;
   border-radius: 7px;
@@ -1141,7 +1141,7 @@ textarea {
 .event a {
   font-size: 12px;
   text-decoration: none;
-  color: #1876f2;
+  color: #236AB9;
 }
 
 .left-event span {
@@ -1149,7 +1149,7 @@ textarea {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #236ab9;
+  background: #236AB9;
   color: white;
   font-size: 10px;
   padding: 4px 0;
@@ -1239,19 +1239,21 @@ textarea {
   border: none;
   height: 30px;
   width: 30px;
+  
 }
-/* ---Blog Styling --- */
+/* -------------- Blog Styling --------- */
 .sidebar-title-blog {
-  color: #236ab9;
+  color: #341C09;
   font-family: "Corben", cursive;
   border-bottom: #595959;
   display: inline-block;
 }
 
 .blogpost-title {
-  color: #fc7307;
+  color: white;
   border-bottom: #595959;
 }
+
 
 .blog-post-cover {
   width: 100%;

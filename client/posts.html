@@ -18,7 +18,7 @@
 
     <nav>
         <div class="nav-left">
-            <div class="logo"><a class="logo" href="index.html">unwind</a></div>
+            <div class="logo"><a class="logo" href="/index.html">unwind</a></div>
             <ul class="filter">
                 <li><a href="#"><img src="images/notif.png" alt="notifIcon"> </a></li>
                 <li><a href="#"><img src="images/inbox.png" alt="imagesIcon"> </a></li>
@@ -29,11 +29,9 @@
         </div>
 
         <!-- Search Bar & User Icon on NavBar-->
+        <!-- Search Bar & User Icon on NavBar-->
         <div class="nav-right">
-            <div class="search-box">
-                <img src="images/search.png">
-                <input type="text" placeholder="Search">
-            </div>
+            <a class="allposts" href="./index.html"> Back To Home </a>
             <div class="nav-user-icon online" onclick="settingsMenuToggle()">
                 <img src="images/user.png">
             </div>
@@ -76,12 +74,13 @@
 
                 <main id="main">
                     <h1 class="topTitles">All Posts</h1>
-                    
+                    <button id="buttonToTop">
+                        <i class="fa fa-chevron-up" aria-hidden="true" style="font-size: 25px;"></i>
+                    </button>
                     <section id="postSection">
                         <!--To the top button-->
                         <!--End of top button-->
-                 
-                    </section> 
+                    </section>
                 </main>
 
             </div>
@@ -101,23 +100,23 @@
             <!-- first blog post -->
             <div class="blogpost-title">
                 <h4>Staying Motivated</h4>
-                <small><em><span style=color:gray>By Anony Mouse</span></em></small>
+                <small><em><span style=color:bisque>By Anony Mous</span></em></small>
             </div>
-            <a href="#"><small>Read more</small></a>
+            <a style=color:#236AB9 href="#"><small>Read more</small></a>
             <img src="images/smaller-quote10.png" class="blog-post-cover">
 
             <!-- second blog post -->
             <div class="blogpost-title">
                 <h4>Persevering</h4>
-                <small><em><span style=color:gray> By Un Named</span></em></small>
+                <small><em><span style=color:bisque> By Un Named</span></em></small>
             </div>
-            <small><a href=“#”>Read more</a></small>
+            <small><a style=color:#236AB9 href=“#”>Read more</a></small>
             <img src="images/smaller-quote3.png" class="blog-post-cover">
 
             <!-- ADVERT -->
             <div class="sidebar-title">
                 <h4>Advertisement Here</h4>
-                <a href="#">Close</a>
+                <a style=color:#236AB9 href="#">Close</a>
             </div>
             <img src="images/advert.png" class="sidebar-ad">
 

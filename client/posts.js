@@ -63,6 +63,7 @@ function displayPosts(posts) {
     dislike.textContent = ` ${post.reaction.dislike}`;
     reactionBtns.append(dislike);
     reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
+
     // const love = document.createElement("button");
     // love.setAttribute("id", `love${post.id}`);
     // love.textContent = ` ${post.reaction.love}`;

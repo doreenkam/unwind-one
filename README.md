@@ -24,7 +24,7 @@ A collaorative project from a team of associates at the Futureproof Academy for 
 - Comment on other entries
 
 
-INSTALLATION & USAGE : 
+INSTALLATION & USAGE : ???
 
 (yusra to add setup she did for backend)
 
@@ -40,10 +40,9 @@ TECHNOLOGIES :
 - Express.Js
 
 
-PROCESS :
+PROCESS : ???
 
-
-LICENCE :
+LICENCE : ???
 
 
 ACHIEVEMENTS :
@@ -56,7 +55,7 @@ ACHIEVEMENTS :
 - Learnt how to successfully send a post request to an API server
 
 
-CODE WE ARE MOST PROUD OF:
+CODE WE ARE MOST PROUD OF: ???
 
 
 TO IMPROVE :

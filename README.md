@@ -1,57 +1,55 @@
-# UNWIND
+# UNWIND 📖 
 
-### DEVELOPERS :
-
-Doreen Kamushinda
-Naomi Emojevbe
-Khari - Leigh Miller
-Yusra Tahir
-
-### THE INSPIRATION :
-
-Ever had those random thoughts that are on the borderline of a consipiracy or maybe the inner self talk that deserves external recoginition? Unwind is where you plant those seeds, safely and anonymously, for fellow curious minds to see.
-
-### PROJECT DESCRIPTION :
-
-A collaorative project from a team of associates at the Futureproof Academy for their LAP1 Portfolio Week Project. The brief entailed creating a community journaling website with specific functionality for users :
-
-- Ability to post anonyously
+### Project Description:
+A collaborative project from a team of associates at the futureproof Academy for their LAP1 Portfolio Week Project. The brief entailed creating a community journaling website with specific functionality for users:
+- Ability to post anonymously
 - Limited characters
 - Add gifs
 - View other entries
 - React to entries with an emoji (3)
 - Comment on other entries
 
-INSTALLATION & USAGE : ???
+## Developers:
+* Doreen Kamushinda
+* Naomi Emojevbe
+* Khari - Leigh Miller
+* Yusra Tahir
 
-### INSTALLATION & USAGE :
+### The Inspiration:
+Ever had those random thoughts that are on the borderline of a consipiracy or maybe the inner self talk that deserves external recoginition? Unwind is where you plant those seeds, safely and anonymously, for fellow curious minds to see!
 
+
+### Installation & Usage : ???
 (yusra to add setup she did for backend)
-
 - Deployed at Netlify & Heroku
 
-### TECHNOLOGIES :
+### Technologies :
 
 - HTML
 - CSS
 - Bootstrap
-- Node
-- Express.Js
-- Jest
+- Node.Js
+-   Express
+-   Jest
+- Fontawesome
+- Trello
+- Figma
 
-### PROCESS :
+### Process :
+Once the brief was received, we began our project by discussing ideas for the site and then created a Trello board to split tasks.
 
-PROCESS : ???
+We then collaborated on building a template of our desired website design using Figma.
+
+
 
 LICENCE : ???
 
-ACHIEVEMENTS :
-
+### Achievements :
 - # Created a project that we are collectively proud of
 
-### LICENCE :
+### Licence :
 
-### ACHIEVEMENTS :
+### Achievements :
 
 - Created a project that we are collectively proud of
 - Thoroughly enjoyed working together as there was continuous laughter throughout
@@ -60,13 +58,11 @@ ACHIEVEMENTS :
 - Expanded our learning of JavaScript in creating various functionality for users
 - Learnt how to successfully send a post request to an API server
 
-### CODE WE ARE MOST PROUD OF:
+### Code We Are Most Proud Of:
 
 CODE WE ARE MOST PROUD OF: ???
 
-# TO IMPROVE :
-
-### TO IMPROVE :
+### Future Improvements:
 
 - To confidently create more unique features using advanced JavaScript functions
 - Creating a more detailed, concise plan at the beginning with a strict schedule to follow to ensure more ease of production

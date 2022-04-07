@@ -62,6 +62,7 @@ function displayPosts(posts) {
     const reactionBtns = document.createElement("div");
     const like = document.createElement("button");
     const dislike = document.createElement("button");
+    const love = document.createElement("button");
 
     reactionBtns.setAttribute("id", `reactionBtns${post.id}`);
     article.append(reactionBtns);
@@ -78,15 +79,13 @@ function displayPosts(posts) {
     dislike.setAttribute("class", "fas fa-thumbs-down dislike__btn");
     dislike.textContent = ` ${post.reaction.dislike}`;
     reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
-
     reactionBtns.append(dislike);
 
-    // const love = document.createElement("button");
-    // love.setAttribute("id", `love${post.id}`);
-    // love.textContent = ` ${post.reaction.love}`;
-    // love.setAttribute("class", "fas fa-heart");
-    // reactionBar.append(love);
-    // reactionCount(love, post.reaction.love, post.id, "love");
+    love.setAttribute("id", `love${post.id}`);
+    love.setAttribute("class", "fas fa-heart love__btn");
+    love.textContent = ` ${post.reaction.love}`;
+    reactionCount(love, post.reaction.love, post.id, "love");
+    reactionBtns.append(love);
 
     // Comments Area
     const commentsArea = document.createElement("div");

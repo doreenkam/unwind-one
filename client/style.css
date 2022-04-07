@@ -1185,61 +1185,58 @@ textarea {
 /* --------- Reaction Button ---------*/
 
 .like__btn {
-  display: inline-block;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   left: 200px;
   height: 30px;
   padding: 5px 5px 5px 10px;
   background: #009dff;
   font-size: 16px;
   font-weight: 600;
-  border: 1px solid rgb(249, 191, 170);
-  border-radius: 5px;
+  border: none;
+  border-radius: 20px;
   width: 75px;
   color: #ffffff;
   cursor: pointer;
 }
 
 .like__btn:hover {
-  background: #7cd3ff;
+  opacity: 0.7;
 }
 
 .dislike__btn {
-  position: relative;
   left: 210px;
   height: 30px;
   padding: 5px 5px 5px 10px;
   background: #ff3b3b;
   font-size: 16px;
   font-weight: 600;
-  border: 1px solid rgb(249, 191, 170);
-  border-radius: 5px;
+  border: none;
+  border-radius: 20px;
   width: 75px;
   color: #ffffff;
   cursor: pointer;
 }
 
 .dislike__btn:hover {
-  background: #ff6060;
+  opacity: 0.7;
 }
 
-/* Emoji Styling */
-
-/* .emoji-div.selected {
-  background-color: red;
-} */
-
-.emoji-div {
-  height: 70px;
-  width: 70px;
-  display: inline-block;
-  align-items: center;
-}
-
-#emoji {
-  border: none;
+.love__btn {
+  left: 220px;
   height: 30px;
-  width: 30px;
+  background: #cd8383;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  width: 75px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.love__btn:hover{
+  opacity: 0.7;
 }
 
 /* ---Blog Styling --- */

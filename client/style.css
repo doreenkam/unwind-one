@@ -27,7 +27,7 @@
 body {
   /* background: #D4E4F7; */
   background: rgb(35,106,185);
-  background: linear-gradient(207deg, rgba(35,106,185,1) 5%, rgba(252,115,7,1) 62%, rgba(52,28,9,1) 96%);
+  background: linear-gradient(180deg, rgba(35,106,185,1) 0%, rgba(252,115,7,1) 99%, rgba(52,28,9,1) 100%);
   transition: background 0.3s;
 }
 
@@ -83,7 +83,7 @@ ul li a img {
 .nav-left ul li {
   font-size: 15px;
   font-weight: 600;
-  color: white;
+  color: bisque;
   list-style: none;
   display: inline-block;
 }
@@ -106,7 +106,8 @@ ul li a img {
 }
 
 .search-box {
-  background: #efefef;
+  background: bisque;
+  color: #341C09;
   width: 350px;
   border-radius: 3px;
   display: flex;
@@ -158,7 +159,7 @@ ul li a img {
 }
 
 .right-sidebar {
-  background: var(--bg-color);
+  background-color: rgb(230, 126, 34, 0.6);
   flex-basis: 32%;
   position: sticky;
   top: 70px;
@@ -217,7 +218,7 @@ ul li a img {
   color: #341C09;
 }
 
-.right-sidebar h4 {
+.sidebar-title h4 {
   font-weight: 600;
   font-size: 16px;
   color: #341C09;
@@ -225,7 +226,7 @@ ul li a img {
 
 .sidebar-title a {
   text-decoration: none;
-  color: #1876f2;
+  color: #341C09;
   font-size: 11px;
 }
 
@@ -233,7 +234,7 @@ ul li a img {
   display: flex;
   font-size: 14px;
   margin-bottom: 20px;
-  color: #341C09;
+  color: white;
 }
 
 .event-left {
@@ -262,12 +263,13 @@ ul li a img {
 
 .event p {
   font-size: 12px;
+  color: bisque;
 }
 
 .event a {
   font-size: 12px;
   text-decoration: none;
-  color: #1876f2;
+  color: #341C09;
 }
 
 .sidebar-ad {
@@ -444,17 +446,18 @@ ul li a img {
 
 .post-container {
   width: 100%;
-  background: var(--bg-color);
+  background: rgb(52, 28, 9, 0.4) ;
   border-radius: 6px;
   padding: 20px;
-  color: #626262;
+  color: bisque;
   margin: 20px 0;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .user-profile span {
   font-size: 13px;
-  color: #9a9a9a;
+  color: #AF601A;
+  font-weight: 900;
 }
 
 .post-row {
@@ -464,17 +467,17 @@ ul li a img {
 }
 
 .post-row a {
-  color: #9a9a9a;
+  color: bisque;
 }
 
 .post-text {
-  color: #4b4b4b;
+  color: white;
   margin: 15px 0;
   font-size: 15px;
 }
 
 .post-text span {
-  color: #626262;
+  color: white;
   font-weight: 500;
 }
 

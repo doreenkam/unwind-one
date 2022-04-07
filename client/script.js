@@ -49,15 +49,64 @@ likeBtn.addEventListener("click", () => {
 
 // ===== REACTION ==== //
 
+// code below is to be in file where function that displays our posts is in.
+
+//Reaction Buttons//
+const reactionBtns = document.createElement("div");
+reactionBtns.setAttribute("id", `reactionBar${post.id}`);
+article.append(reactionBtns);
+
+// Like Button //
+const like = document.createElement("button");
+like.setAttribute("id", `like${post.id}`);
+like.setAttribute("class", "fas fa-thumbs-up");
+like.textContent = ` ${post.reaction.like}`;
+reactionBar.append(like);
+reactionCount(like, post.reaction.like, post.id, "like");
+
+// Dislike Button //
+const dislike = document.createElement("button");
+dislike.setAttribute("id", `dislike${post.id}`);
+dislike.setAttribute("class", "fas fa-thumbs-down");
+dislike.textContent = ` ${post.reaction.dislike}`;
+
+dislike.addEventListener("mouseover", function (event) {
+  event.target.style.backgroundolor = "rgb(235,219,195)";
+});
+
+reactionBtn.append(dislike);
+reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
+
+//love//
+const love = document.createElement("button");
+love.setAttribute("id", `love${post.id}`);
+love.textContent = ` ${post.reaction.love}`;
+love.setAttribute("class", "fas fa-heart");
+
+reactionBtns.append(love);
+reactionCount(love, post.reaction.love, post.id, "love");
+
 const like = document.getElementById("like");
 const dislike = document.getElementById("dislike");
+const love = document.getElementById("love");
 const likeCount = document.getElementById("likeCount");
 const dislikeCount = document.getElementById("dislikeCount");
+const loveCount = document.getElementById("loveCount");
 
-function reactionCount(button, count, id, type) {
+// this code is to be part of the function that displays our posts
+like.textContent = ` ${post.reaction.like}`;
+dislike.textContent = ` ${post.reaction.dislike}`;
+love.textContent = ` ${post.reaction.love}`;
+
+reactionCount(like, post.reaction.like, post.id, "like");
+reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
+reactionCount(love, post.reaction.love, post.id, "love");
+
+// function for reaction count
+function reactionCount(button, count, id) {
   button.addEventListener("click", () => {
     count += 1;
-    fetch(`http://localhost:3000/id=${id}`);
+    fetch(`http://localhost:3000/posts/id=${id}`);
     button.innerHTML = ` ${count}`;
     button.disabled = true;
   });
@@ -247,7 +296,6 @@ function displayPosts(posts) {
     content.setAttribute("id", `content${post.id}`);
     content.textContent = post.content;
     newPost.append(content);
-    
   }
 }
 

@@ -336,6 +336,7 @@ ul li a img {
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .story1 {
@@ -398,7 +399,7 @@ ul li a img {
   border-radius: 6px;
   padding: 30px;
   color: #626262;
-  box-shadow: rgba(0, 0, 0, 0.5);
+  box-shadow: 10px rgb(190, 180, 180);
 }
 
 .post-input-container {
@@ -893,15 +894,6 @@ form .options {
 
   .main-content {
     flex-basis: 100%;
-  }
-
-  .logo {
-    width: 110px;
-    margin-right: 20px;
-  }
-
-  .search-box {
-    display: none;
   }
 
   .nav-left ul li img {

@@ -38,6 +38,7 @@ function displayPosts(posts) {
         // Getting the
         giphy.src = data.data[0].images.original.url;
         // Appending GIF to '<div>' Element
+        gifDiv.style.textAlign = "center";
         gifDiv.append(giphy);
       })
       .catch(function () {
@@ -64,6 +65,7 @@ function displayPosts(posts) {
     dislike.setAttribute("class", "fas fa-thumbs-down dislike__btn");
     dislike.textContent = ` ${post.reaction.dislike}`;
     reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
+
     reactionBtns.append(dislike);
 
     // const love = document.createElement("button");
@@ -112,6 +114,7 @@ function displayPosts(posts) {
     commentInput.setAttribute("name", `commentInput${post.id}`);
     commentInput.setAttribute("placeholder", " Write your comment here...");
     commentInput.setAttribute("required", "required");
+    commentInput.style.width = "550px";
     commentForm.append(commentInput);
 
     const br = document.createElement("br");
@@ -121,6 +124,9 @@ function displayPosts(posts) {
     submitComment.setAttribute("id", `submitComment${post.id}`);
     submitComment.setAttribute("type", "submit");
     submitComment.setAttribute("value", "Submit Comment");
+    submitComment.style.width = "200px";
+    submitComment.style.position = "relative";
+    submitComment.style.left = "200px";
     commentForm.append(submitComment);
 
     newComment(commentForm, post.id, `commentInput${post.id}`);

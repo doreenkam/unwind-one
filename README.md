@@ -46,17 +46,16 @@ LICENCE : ???
 
 ### Achievements :
 - Created a project that we are collectively proud of
-
-### Licence :
-
-### Achievements :
-
-- Created a project that we are collectively proud of
 - Thoroughly enjoyed working together as there was continuous laughter throughout
 - Executed great team work in recognising problems and dealing with them efficiently
 - Made extremely good use of technologies learnt so far on the course : HTML, CSS, vanilla JS
 - Expanded our learning of JavaScript in creating various functionality for users
 - Learnt how to successfully send a post request to an API server
+
+### Challenges
+- Handling merge conflicts
+- Dealing with diverged branches & having to rebase
+- 
 
 ### Code We Are Most Proud Of:
 

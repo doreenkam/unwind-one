@@ -1028,7 +1028,7 @@ form .options .list {
   width: 500px;
   height: 30px;
   cursor: pointer;
-  background-color: #341C09;
+  background-color: rgba(52, 28, 9, 0.4);
   color: rgb(255, 255, 255);
   font-size: 20spx;
   border-radius: 7px;

@@ -91,6 +91,13 @@ Once the brief was received, we began our project by discussing ideas for the si
 
 We then collaborated on building a template of our desired website design using Figma.
 
+![](/homePage.png)
+
+### Test Coverage: 
+
+![](/scriptTest.png)
+![](/appTest.png)
+
 ### LICENCE
 
 - [MIT License](https://opensource.org/licenses/mit-license.php)

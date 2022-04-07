@@ -1145,7 +1145,7 @@ textarea {
 
 /* --------- Reaction Button ---------*/
 
-.like__btn {
+#like {
   display: inline-block;
   position: relative;
   left: 160px;
@@ -1155,12 +1155,13 @@ textarea {
   font-size: 12px;
   font-weight: 600;
   padding: 10px;
+  border: none;
   border-radius: 50px;
   color: #ffffff;
   cursor: pointer;
 }
 
-.like__btn:hover {
+#like:hover {
   background: #32bbff;
 }
 

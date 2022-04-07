@@ -159,23 +159,16 @@
                     <div class="activity-icons">
 
                         <div class="commentIcon"><img src="images/comments.png">5</div>
-                        <div class="like__btn">
-                            <p>
-                                <span id="like"><i class="far fa-thumbs-up"></i></span>
-                                <span id="count">0</span>
-                            </p>
-                        </div>
-                        <div class="dislike__btn">
-                            <p>
-                                <span id="dislike"><i class="fas fa-thumbs-down"></i></span>
-                                <span id="count">0</span>
-                            </p>
-                        </div>
-                        <div class="love__btn">
-                            <p>
-                                <span id="dislike"><i class="fas fa-heart"></i></span>
-                                <span id="count">0</span>
-                            </p>
+                        <div id="reactionBtns">
+                            <div class="like__btn">
+                                <button id="like" class="fas fa-thumbs-up"><span id="count">0</span></button>
+                            </div>
+                            <div class="dislike__btn">
+                                <button id="dislike" class="fas fa-thumbs-down"><span id="count">0</span></button>
+                            </div>
+                            <div class="love__btn">
+                                <button id="dislike" class="fas fa-heart"><span id="count">0</span></button>
+                            </div>
                         </div>
                     </div>
                     <div class="post-profile-icon">
@@ -408,7 +401,7 @@
         <p>Unwind Copyright © 2022</p>
     </div>
 
-   
+
 </body>
 
 </html>

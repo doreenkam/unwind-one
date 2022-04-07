@@ -73,6 +73,11 @@ a {
   text-decoration-line: none;
 }
 
+.logo,
+a:hover {
+  color: rgb(0, 106, 255);
+}
+
 .nav-left,
 .nav-right {
   display: flex;

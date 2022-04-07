@@ -8,23 +8,25 @@ fetch("http://localhost:3000/posts")
 
 function displayPosts(posts) {
   for (post of posts) {
-    //article//
-    const article = document.createElement(`article`);
+    // Article
+    const article = document.createElement("article");
     article.setAttribute("id", `post${post.id}`);
     document.getElementById("postSection").append(article);
-    //title//
+
+    // Creating Header / Title
     const title = document.createElement("h2");
     title.setAttribute("id", `title${post.id}`);
     title.textContent = post.title;
     article.append(title);
-    //main body of post//
+
+    // The Body of Post
     const main = document.createElement("p");
     main.setAttribute("id", `main${post.id}`);
     main.textContent = post.content;
     article.append(main);
     //gif//
 
-    //Create div element for gif and append to article
+    // Appending the Gif to the Div
     const gifDiv = document.createElement("div");
     gifDiv.setAttribute("id", "gifDiv");
     article.append(gifDiv);
@@ -33,16 +35,16 @@ function displayPosts(posts) {
     fetch(url)
       .then((r) => r.json())
       .then((data) => {
-        //grabbing gif image
+        // Getting the
         giphy.src = data.data[0].images.original.url;
-        //making gif image append to div
+        // Appending GIF to '<div>' Element
         gifDiv.append(giphy);
       })
       .catch(function () {
-        console.log("No GIF entry");
+        console.log("No GIF found");
       });
 
-    // Reaction Button // "like");
+    // Creating Reaction Buttons
     const reactionBtns = document.createElement("div");
     const like = document.createElement("button");
     const dislike = document.createElement("button");
@@ -50,19 +52,19 @@ function displayPosts(posts) {
     reactionBtns.setAttribute("id", `reactionBtns${post.id}`);
     article.append(reactionBtns);
 
-    // Like Button //
+    // Assigning Styling & Value to 'Likes' Button
     like.setAttribute("id", `like${post.id}`);
     like.setAttribute("class", "fas fa-thumbs-up like__btn");
     like.textContent = ` ${post.reaction.like}`;
-    reactionBtns.append(like);
     reactionCount(like, post.reaction.like, post.id, "like");
+    reactionBtns.append(like);
 
-    // Dislike Button //
+    // Assigning Styling & Value to 'Dislikes' Button
     dislike.setAttribute("id", `dislike${post.id}`);
     dislike.setAttribute("class", "fas fa-thumbs-down dislike__btn");
     dislike.textContent = ` ${post.reaction.dislike}`;
-    reactionBtns.append(dislike);
     reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
+    reactionBtns.append(dislike);
 
     // const love = document.createElement("button");
     // love.setAttribute("id", `love${post.id}`);
@@ -71,7 +73,7 @@ function displayPosts(posts) {
     // reactionBar.append(love);
     // reactionCount(love, post.reaction.love, post.id, "love");
 
-    // Comments Area//
+    // Comments Area
     const commentsArea = document.createElement("div");
     commentsArea.setAttribute("class", "commentsArea");
     article.append(commentsArea);

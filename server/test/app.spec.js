@@ -18,14 +18,14 @@ describe("API Server", () => {
     request(api).get("/").expect(200, done);
   });
   it("retrieves a random quote by id", (done) => {
-    request(api).get("/post/2").expect(200, done);
+    request(api).get("/posts/2").expect(200, done);
   });
 
   it("writeJSON works", (done) => {
-    request(api).get("/post").expect("Content-Type", /json/).expect(200, done);
+    request(api).get("/posts").expect("Content-Type", /json/).expect(200, done);
   });
 
   it("readJSON works", (done) => {
-    request(api).post("/messages").expect("Content-Type", /json/).expect(200, done);
+    request(api).post("/posts").expect("Content-Type", /json/).expect(200, done);
   });
 });

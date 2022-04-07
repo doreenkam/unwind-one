@@ -26,8 +26,13 @@
 
 body {
   /* background: #D4E4F7; */
-  background: rgb(52,28,9);
-  background: radial-gradient(circle, rgba(52,28,9,1) 5%, rgba(252,115,7,1) 22%, rgba(35,106,185,1) 79%);
+  background: rgb(52, 28, 9);
+  background: radial-gradient(
+    circle,
+    rgba(52, 28, 9, 1) 5%,
+    rgba(252, 115, 7, 1) 22%,
+    rgba(35, 106, 185, 1) 79%
+  );
   transition: background 0.3s;
 }
 
@@ -170,7 +175,7 @@ ul li a img {
 }
 
 .right-sidebar {
-  background: rgb(52, 28, 9, 0.4) ;
+  background: rgb(52, 28, 9, 0.4);
   flex-basis: 32%;
   position: sticky;
   top: 70px;
@@ -389,13 +394,12 @@ ul li a img {
 /* ------------write post --------- */
 .write-post-container {
   width: 100%;
-  background: rgb(52, 28, 9, 0.8) ;
+  background: rgb(52, 28, 9, 0.8);
   border-radius: 6px;
   padding: 30px;
   color: #626262;
-  box-shadow:rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.5);
 }
-
 
 .post-input-container {
   padding-left: 50px;
@@ -405,7 +409,7 @@ ul li a img {
 }
 
 .write-post-title {
-  color: bisque
+  color: bisque;
 }
 
 .post-input-container textarea {
@@ -424,17 +428,16 @@ ul li a img {
   margin-left: 10px;
   width: 100px;
   height: 25px;
-  cursor:auto;
+  cursor: auto;
   background-color: #a3b3d9;
   border-radius: 5px;
   text-align: center;
   border: none;
 }
 
-#titleForm:hover{
+#titleForm:hover {
   opacity: 0.5;
 }
-
 
 .user-profile {
   display: flex;
@@ -457,7 +460,6 @@ ul li a img {
 .user-profile small {
   font-size: 15px;
 }
-
 
 .add-post-links {
   display: flex;
@@ -482,7 +484,7 @@ ul li a img {
 
 .post-container {
   width: 100%;
-  background: rgb(52, 28, 9, 0.4);
+  background: rgba(52, 28, 9, 0.23);
   border-radius: 6px;
   padding: 20px;
   color: bisque;
@@ -1029,30 +1031,30 @@ form .options .list {
   width: 500px;
   height: 30px;
   cursor: pointer;
-  background-color: rgba(52, 28, 9, 0.4);
+  background-color: rgba(86, 140, 178, 0.962);
   color: rgb(255, 255, 255);
   font-size: 20spx;
   border-radius: 7px;
   font-weight: 600;
   text-align: center;
   border: none;
-  box-shadow: 0 0 20px #eee;
 }
 
 #inputGiphy {
-  margin-left: 100px;
+  margin-left: 70px;
   margin-top: 10px;
   width: 250px;
   height: 30px;
   cursor: pointer;
-  background-color: #a3b3d9;
+  background-color: rgba(112, 158, 212, 0.962);
   color: rgb(255, 255, 255);
   font-size: 20spx;
-  border-radius: 7px;
   font-weight: 600;
   text-align: center;
+  border-radius: 7px;
+  text-align: center;
   border: none;
-  box-shadow: 0 0 20px #eee;
+  box-shadow: 0 0 2px #eee;
 }
 
 #inputGiphy:hover {
@@ -1060,6 +1062,8 @@ form .options .list {
 }
 
 .giphyButton {
+  position: relative;
+  left: 150px;
   margin-top: 10px;
   width: 100px;
   height: 30px;
@@ -1071,7 +1075,7 @@ form .options .list {
   font-weight: 600;
   text-align: center;
   border: none;
-  box-shadow: 0 0 20px #eee;
+  box-shadow: 0 0 2px #eee;
 }
 
 .giphyButton:hover {
@@ -1288,4 +1292,3 @@ textarea {
   margin-top: 5px;
   border-radius: 4px;
 }
-

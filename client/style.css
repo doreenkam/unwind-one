@@ -26,8 +26,13 @@
 
 body {
   /* background: #D4E4F7; */
-  background: rgb(35,106,185);
-  background: linear-gradient(180deg, rgba(35,106,185,1) 0%, rgba(252,115,7,1) 99%, rgba(52,28,9,1) 100%);
+  background: rgb(35, 106, 185);
+  background: linear-gradient(
+    180deg,
+    rgba(35, 106, 185, 1) 0%,
+    rgba(252, 115, 7, 1) 99%,
+    rgba(52, 28, 9, 1) 100%
+  );
   transition: background 0.3s;
 }
 
@@ -35,7 +40,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #341C09;
+  background: #341c09;
   padding: 5px 5%;
   position: sticky;
   top: 0;
@@ -107,7 +112,7 @@ ul li a img {
 
 .search-box {
   background: bisque;
-  color: #341C09;
+  color: #341c09;
   width: 350px;
   border-radius: 3px;
   display: flex;
@@ -175,7 +180,7 @@ ul li a img {
   position: sticky;
   top: 70px;
   align-self: flex-start;
-  color: bisque;
+  color: #626262;
   padding: 20px;
   border-radius: 4px;
 }
@@ -226,18 +231,18 @@ ul li a img {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 18px;
-  color: #341C09;
+  color: #341c09;
 }
 
 .sidebar-title h4 {
   font-weight: 600;
   font-size: 16px;
-  color: #341C09;
+  color: #341c09;
 }
 
 .sidebar-title a {
   text-decoration: none;
-  color: #341C09;
+  color: #341c09;
   font-size: 11px;
 }
 
@@ -280,7 +285,7 @@ ul li a img {
 .event a {
   font-size: 12px;
   text-decoration: none;
-  color: #341C09;
+  color: #341c09;
 }
 
 .sidebar-ad {
@@ -362,7 +367,7 @@ ul li a img {
   width: 43px;
   height: 40px;
   border-radius: 50%;
-  border: 3px solid bisque;
+  border: 3px solid #ffffff;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -373,7 +378,7 @@ ul li a img {
   bottom: 10px;
   width: 100%;
   text-align: center;
-  color: bisque;
+  color: #fff;
   font-size: 15px;
 }
 
@@ -423,13 +428,11 @@ ul li a img {
   padding-top: 25px;
 }
 
-
 .post-input-container textarea {
   width: 93%;
   height: 90px;
   border: 0;
   outline: 0;
-  color: white;
   border-bottom: 1px solid rgb(30, 30, 30);
   resize: none;
   font-size: 20px;
@@ -459,7 +462,7 @@ ul li a img {
 
 .post-container {
   width: 100%;
-  background: rgb(52, 28, 9, 0.4) ;
+  background: rgb(52, 28, 9, 0.4);
   border-radius: 6px;
   padding: 20px;
   color: bisque;
@@ -469,7 +472,7 @@ ul li a img {
 
 .user-profile span {
   font-size: 13px;
-  color: #AF601A;
+  color: #af601a;
   font-weight: 900;
 }
 
@@ -495,7 +498,7 @@ ul li a img {
 }
 
 .post-text a {
-  color: #236AB9;
+  color: #1876f2;
   text-decoration: none;
 }
 
@@ -565,7 +568,7 @@ form .options {
 
 .user-profile a {
   font-size: 12px;
-  color: #236AB9;
+  color: #1876f2;
   text-decoration: none;
 }
 
@@ -618,7 +621,7 @@ form .options {
 
 .footer {
   text-align: center;
-  color: #341C09;
+  color: #341c09;
   padding: 10px 0 20px;
   font-weight: 800;
   font-size: 13px;
@@ -699,7 +702,7 @@ form .options {
 }
 
 .pd-right button {
-  background: #236AB9;
+  background: #1876f2;
   border: 0;
   outline: 0;
   padding: 6px 10px;
@@ -802,7 +805,7 @@ form .options {
 
 .title-box a {
   text-decoration: none;
-  color: #236AB9;
+  color: #1876f2;
   font-size: 14px;
 }
 
@@ -1005,7 +1008,7 @@ form .options .list {
   width: 500px;
   height: 30px;
   cursor: pointer;
-  background-color: #236AB9;
+  background-color: #6491fb;
   color: rgb(255, 255, 255);
   font-size: 20spx;
   border-radius: 7px;
@@ -1142,7 +1145,7 @@ textarea {
 .event a {
   font-size: 12px;
   text-decoration: none;
-  color: #236AB9;
+  color: #1876f2;
 }
 
 .left-event span {
@@ -1150,7 +1153,7 @@ textarea {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #236AB9;
+  background: #236ab9;
   color: white;
   font-size: 10px;
   padding: 4px 0;
@@ -1170,7 +1173,7 @@ textarea {
 .like__btn {
   display: inline-block;
   position: relative;
-  left: 160px;
+  left: 0px;
   height: 30px;
   padding: 5px 5px 5px 10px;
   background: #569aff;
@@ -1179,6 +1182,7 @@ textarea {
   padding: 10px;
   border: none;
   border-radius: 50px;
+  width: 75px;
   color: #ffffff;
   cursor: pointer;
 }
@@ -1189,14 +1193,16 @@ textarea {
 
 .dislike__btn {
   position: relative;
-  left: 128px;
+  left: 10px;
   height: 30px;
   padding: 5px 5px 5px 10px;
   background: #ff5656;
   font-size: 12px;
   font-weight: 600;
   padding: 10px;
-  border-radius: 50px;
+  border: none;
+  border-radius: 20px;
+  width: 75px;
   color: #ffffff;
   cursor: pointer;
 }
@@ -1240,21 +1246,19 @@ textarea {
   border: none;
   height: 30px;
   width: 30px;
-  
 }
-/* -------------- Blog Styling --------- */
+/* ---Blog Styling --- */
 .sidebar-title-blog {
-  color: #341C09;
+  color: #236ab9;
   font-family: "Corben", cursive;
   border-bottom: #595959;
   display: inline-block;
 }
 
 .blogpost-title {
-  color: white;
+  color: #fc7307;
   border-bottom: #595959;
 }
-
 
 .blog-post-cover {
   width: 100%;
@@ -1268,14 +1272,13 @@ textarea {
   margin-left: 10px;
   width: 100px;
   height: 25px;
-  cursor:auto;
-  background-color: #341C09;
+  cursor: auto;
+  background-color: bisque;
   border-radius: 5px;
   text-align: center;
   border: none;
 }
 
-#titleForm:hover{
+#titleForm:hover {
   opacity: 0.5;
 }
-

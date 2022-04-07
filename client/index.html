@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 
     <script defer src="script.js"></script>
+    <script defer src="posts.js"></script>
 </head>
 
 <body>
@@ -135,7 +136,11 @@
                         <!-- DATA -->
                         <label for="title"> Anonymous #ID </label>
 
+
                         <input type="text" name="title" id="titleForm" placeholder="username" required />
+
+                        <input type="text" name="title" id="titleForm" class="titleInput" required />
+
                     </div>
                     <!-- CONTENT -->
                     <div class="post-input-container">
@@ -143,16 +148,16 @@
                         <label for="contentForm"></label>
                         <br>
 
-                        
+
                         <textarea id="contentForm" rows="3" name="content" maxlength="150"
                             placeholder="What's on your mind? (max. 150 characters)" required> </textarea>
 
-                            <img id="gifImage" alt="" class="center">
+                        <img id="gifImage" alt="" class="center">
                         <label id="gifTitle" for="gif"></label>
                         <input type="text" id="inputGiphy" placeholder="Search for GIFs">
 
                         <div id="giphyButton" class="giphyButton" value="Giphy!" onclick="sendApiRequest()"></div>
-                        
+
                         <br>
 
                     </div>
@@ -191,7 +196,7 @@
                     <!------- Reaction Buttons -------->
                     <div id="reactioBar0" class="activity-icons">
 
-                        <div class="like__btn">
+                        <!-- <div class="like__btn">
                             <p><span id="like"><i class="far fa-thumbs-up"></i></span>
                                 <span id="count">0</span>
                             </p>
@@ -207,7 +212,7 @@
                                 <span id="dislike"><i class="fas fa-heart"></i></span>
                                 <span id="count">0</span>
                             </p>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="post-profile-icon">

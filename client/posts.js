@@ -23,6 +23,7 @@ function displayPosts(posts) {
     main.textContent = post.content;
     article.append(main);
     //gif//
+
     //Create div element for gif and append to article
     const gifDiv = document.createElement("div");
     gifDiv.setAttribute("id", "gifDiv");
@@ -40,28 +41,28 @@ function displayPosts(posts) {
       .catch(function () {
         console.log("No GIF entry");
       });
-    // Reaction Button //
-    // const reactionBtns = document.createElement("div");
-    // reactionBtns.setAttribute("id", `reactionBtns${post.id}`);
-    // article.append(reactionBtns);
+
+    // Reaction Button // "like");
+    const reactionBtns = document.createElement("div");
+    const like = document.createElement("button");
+    const dislike = document.createElement("button");
+
+    reactionBtns.setAttribute("id", `reactionBtns${post.id}`);
+    article.append(reactionBtns);
 
     // Like Button //
-    // const like = document.createElement("button");
-    // like.setAttribute("id", `like${post.id}`);
-    // like.setAttribute("class", "fas fa-thumbs-up");
-    // like.textContent = ` ${post.reaction.like}`;
-    // reactionBtns.append(like);
-    // reactionCount(like, post.reaction.like, post.id, "like");
+    like.setAttribute("id", `like${post.id}`);
+    like.setAttribute("class", "fas fa-thumbs-up like__btn");
+    like.textContent = ` ${post.reaction.like}`;
+    reactionBtns.append(like);
+    reactionCount(like, post.reaction.like, post.id, "like");
 
     // Dislike Button //
-    // const dislike = document.createElement("button");
-    // clap.setAttribute("id", `dislike${post.id}`);
-    // clap.setAttribute("class", "fas fa-thumbs-down");
-    // clap.textContent = ` ${post.reaction.dislike}`;
-    // reactionBtns.append(dislike);
-    // reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
-
-    // Heart Button //
+    dislike.setAttribute("id", `dislike${post.id}`);
+    dislike.setAttribute("class", "fas fa-thumbs-down dislike__btn");
+    dislike.textContent = ` ${post.reaction.dislike}`;
+    reactionBtns.append(dislike);
+    reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
     // const love = document.createElement("button");
     // love.setAttribute("id", `love${post.id}`);
     // love.textContent = ` ${post.reaction.love}`;

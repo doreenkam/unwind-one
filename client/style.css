@@ -127,6 +127,17 @@ ul li a img {
   border: 0;
 }
 
+.allposts {
+  color: bisque;
+  font-family: "Corben", cursive;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.allposts:hover {
+  opacity: 0.7;
+}
+
 .online {
   position: relative;
   border: 2px blue;
@@ -411,6 +422,7 @@ ul li a img {
   padding-left: 50px;
   padding-top: 25px;
 }
+
 
 .post-input-container textarea {
   width: 93%;
@@ -1248,3 +1260,19 @@ textarea {
   margin-top: 5px;
   border-radius: 4px;
 }
+
+#titleForm {
+  margin-left: 10px;
+  width: 100px;
+  height: 25px;
+  cursor:auto;
+  background-color: bisque;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+
+#titleForm:hover{
+  opacity: 0.5;
+}
+

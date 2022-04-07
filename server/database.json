@@ -10,7 +10,7 @@
       "dislike": 0,
       "love": 0
     },
-    "comments": ["First comment! Before deployment"]
+    "comments": ["First comment!"]
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
       "dislike": 0,
       "love": 0
     },
-    "comments": ["Out of this world! Before deployment"]
+    "comments": ["Second comment!"]
   },
   {
     "id": 3,

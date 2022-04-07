@@ -15,7 +15,7 @@
     <!------------------ Navigation Bar ------------------>
     <nav>
         <div class="nav-left">
-            <div class="logo"><a class="logo" href="/index.html">unwind</a></div>
+            <div class="logo"><a class="logo" href="index.html">unwind</a></div>
             <ul class="filter">
                 <li><a href="#"><img src="images/notif.png" alt="notifIcon"> </a></li>
                 <li><a href="#"><img src="images/inbox.png" alt="imagesIcon"> </a></li>
@@ -27,10 +27,7 @@
 
         <!-- Search Bar & User Icon on NavBar-->
         <div class="nav-right">
-            <div class="search-box">
-                <img src="images/search.png">
-                <input type="text" placeholder="Search">
-            </div>
+            <a class="allposts" href="./posts.html"> See All Posts</a>
             <div class="nav-user-icon online" onclick="settingsMenuToggle()">
                 <img src="images/user.png">
             </div>
@@ -62,11 +59,11 @@
         </div>
     </nav>
 
-    
+
 
     <!------------------ Main Section: Stories ------------------>
     <div class="container">
-        
+
         <div class="left-sidebar"></div>
 
         <div class="main-content">
@@ -133,33 +130,37 @@
                 <form id="postform">
                     <div class="user-profile">
                         <img src="images/user.png">
-                    
 
-                    <!-- DATA -->
-                    <label for="title"> Anonymous #ID </label>
-                    
-                    <input type="text" name="title" id="titleForm" class="titleInput" required />
-                </div>
+
+                        <!-- DATA -->
+                        <label for="title"> Anonymous #ID </label>
+
+                        <input type="text" name="title" id="titleForm" placeholder="username" required />
+                    </div>
                     <!-- CONTENT -->
                     <div class="post-input-container">
 
                         <label for="contentForm"></label>
                         <br>
 
-                        <img id="gifImage" alt="" class="center">
-
+                        
                         <textarea id="contentForm" rows="3" name="content" maxlength="150"
-                            placeholder="What's on your mind? (max. 150 characters)" required></textarea>
+                            placeholder="What's on your mind? (max. 150 characters)" required> </textarea>
+
+                            <img id="gifImage" alt="" class="center">
+                        <label id="gifTitle" for="gif"></label>
+                        <input type="text" id="inputGiphy" placeholder="Search for GIFs">
+
+                        <div id="giphyButton" class="giphyButton" value="Giphy!" onclick="sendApiRequest()"></div>
+                        
+                        <br>
+
                     </div>
 
                     <!-- GIPHY  -->
 
-                    <label id="gifTitle" for="gif"></label>
-                    <input type="text" id="inputGiphy" placeholder="Search for GIFs">
-                    <button id="giphyButton" class="giphyButton" onclick="sendApiRequest()"> Giphy! </button>
-                    <br>
 
-                    <input style="margin-top: 10px;" class="postBtn" type="submit" id="submitForm"
+                    <input style="margin-top: 10px;" type="submit" class="postBtn" id="submitForm"
                         value="Create Post" />
 
                 </form>
@@ -174,7 +175,7 @@
                     <div class="user-profile">
                         <img src="images/iconAnon.png">
                         <div>
-                            <p>Anonymous #15</p>
+                            <p>Anonymous #1</p>
                             <span>March 24 2022, 14:15 PM</span>
                         </div>
                     </div>
@@ -184,15 +185,14 @@
                     just
                     not my type. Ugh! <a href=""> #NotFair</a></p>
                 <div class="post-row">
+                    <a href="#" class="viewComments">View all comments</a>
 
-                    <a href="#" style="position: relative;">View all comments</a>
 
                     <!------- Reaction Buttons -------->
-                    <div id="reactioBar0" class="activity-icons" style="margin-right: 10%;">
+                    <div id="reactioBar0" class="activity-icons">
 
                         <div class="like__btn">
-                            <p>
-                                <span id="like"><i class="fas fa-thumbs-up"></i></span>
+                            <p><span id="like"><i class="far fa-thumbs-up"></i></span>
                                 <span id="count">0</span>
                             </p>
                         </div>
@@ -209,8 +209,11 @@
                             </p>
                         </div>
                     </div>
-                </div>
 
+                    <div class="post-profile-icon">
+                        <img src="images/user.png"> <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
             </div>
 
             <!-- Filler Post Two -->
@@ -219,7 +222,7 @@
                     <div class="user-profile">
                         <img src="images/iconAnon.png">
                         <div>
-                            <p>Anonymous #14</p>
+                            <p>Anonymous #2</p>
                             <span>March 24 2021, 13:40 PM</span>
                         </div>
                     </div>
@@ -231,15 +234,16 @@
                     How does that even make sense?</p>
                 <img src="images/post2.jpeg" class="post-img">
                 <div class="post-row">
-                    <a href="#" style="position: relative; left: 50px;">View all comments</a>
+                    <a href="#" class="viewComments">View all comments</a>
 
 
                     <!------- Reaction Buttons -------->
                     <div id="reactioBar0" class="activity-icons">
-                        <div class="like__btn">
-                            <span id="like"><i class="far fa-thumbs-up"></i></span>
-                            <span id="count">0</span>
 
+                        <div class="like__btn">
+                            <p><span id="like"><i class="far fa-thumbs-up"></i></span>
+                                <span id="count">0</span>
+                            </p>
                         </div>
                         <div class="dislike__btn">
                             <p>
@@ -254,6 +258,7 @@
                             </p>
                         </div>
                     </div>
+
                     <div class="post-profile-icon">
                         <img src="images/user.png"> <i class="fas fa-caret-down"></i>
                     </div>
@@ -265,7 +270,7 @@
                     <div class="user-profile">
                         <img src="images/iconAnon.png">
                         <div>
-                            <p>Anonymous #13</p>
+                            <p>Anonymous #3</p>
                             <span>March 24 2022, 12:45 PM</span>
                         </div>
                     </div>
@@ -358,9 +363,6 @@
                         <a href="#"> More Info</a>
                     </div>
                 </div>
-            </div>
-            <div class="sidebar-title">
-                <a href="./posts.html">All Posts <i class="fas fa-book-reader"></i></a>
             </div>
 
             <div class="sidebar-title">

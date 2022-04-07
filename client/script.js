@@ -57,21 +57,19 @@ function sendApiRequest() {
 }
 
 // --------------- Create Post Output ----------- //
-   
+
 const form = document.getElementById("postform");
 const title = document.getElementById("titleForm");
-const description = document.getElementById("descriptionForm");
 const content = document.getElementById("contentForm");
-const gif = document.getElementById("inputGiphy");
+const gif = document.getElementById("gifImage");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const title = event.target.titleForm.value;
-  const description = event.target.descriptionForm.value;
   const content = event.target.contentForm.value;
-  const gif = event.target.inputGiphy.value;
+  const gif = event.target.gifImage.value;
 
-  submitPost(title, description, content, gif);
+  submitPost(title, content, gif);
   alert("Post created");
   form.reset();
   redirectHome();
@@ -80,7 +78,6 @@ form.addEventListener("submit", (event) => {
 function submitPost(title, description, content, gif) {
   const newPostElements = {
     title: title,
-    description: description,
     content: content,
     gif: gif,
   };
@@ -94,6 +91,5 @@ function submitPost(title, description, content, gif) {
 }
 
 function redirectHome() {
-  window.location.href = "index.html";
+  window.location.href = "posts.html";
 }
-

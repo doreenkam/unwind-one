@@ -41,33 +41,33 @@ function displayPosts(posts) {
         console.log("No GIF entry");
       });
     // Reaction Button //
-    const reactionBtns = document.createElement("div");
-    reactionBtns.setAttribute("id", `reactionBtns${post.id}`);
-    article.append(reactionBtns);
+    // const reactionBtns = document.createElement("div");
+    // reactionBtns.setAttribute("id", `reactionBtns${post.id}`);
+    // article.append(reactionBtns);
 
     // Like Button //
-    const like = document.createElement("button");
-    like.setAttribute("id", `like${post.id}`);
-    like.setAttribute("class", "fas fa-thumbs-up");
-    like.textContent = ` ${post.reaction.like}`;
-    reactionBtns.append(like);
-    reactionCount(like, post.reaction.like, post.id, "like");
+    // const like = document.createElement("button");
+    // like.setAttribute("id", `like${post.id}`);
+    // like.setAttribute("class", "fas fa-thumbs-up");
+    // like.textContent = ` ${post.reaction.like}`;
+    // reactionBtns.append(like);
+    // reactionCount(like, post.reaction.like, post.id, "like");
 
     // Dislike Button //
-    const dislike = document.createElement("button");
-    clap.setAttribute("id", `dislike${post.id}`);
-    clap.setAttribute("class", "fas fa-thumbs-down");
-    clap.textContent = ` ${post.reaction.dislike}`;
-    reactionBtns.append(dislike);
-    reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
+    // const dislike = document.createElement("button");
+    // clap.setAttribute("id", `dislike${post.id}`);
+    // clap.setAttribute("class", "fas fa-thumbs-down");
+    // clap.textContent = ` ${post.reaction.dislike}`;
+    // reactionBtns.append(dislike);
+    // reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
 
     // Heart Button //
-    const love = document.createElement("button");
-    love.setAttribute("id", `love${post.id}`);
-    love.textContent = ` ${post.reaction.love}`;
-    love.setAttribute("class", "fas fa-heart");
-    reactionBar.append(love);
-    reactionCount(love, post.reaction.love, post.id, "love");
+    // const love = document.createElement("button");
+    // love.setAttribute("id", `love${post.id}`);
+    // love.textContent = ` ${post.reaction.love}`;
+    // love.setAttribute("class", "fas fa-heart");
+    // reactionBar.append(love);
+    // reactionCount(love, post.reaction.love, post.id, "love");
 
     // Comments Area//
     const commentsArea = document.createElement("div");

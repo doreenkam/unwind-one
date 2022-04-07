@@ -69,6 +69,7 @@ ul li a img {
   font-family: "Corben", cursive;
   font-size: 25px;
   font-weight: 900;
+  text-decoration: none;
 }
 
 .nav-left,

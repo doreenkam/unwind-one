@@ -12,7 +12,7 @@
 
 <body>
 
-    <!-- Fixed Navigation Bar -->
+    <!------------------ Navigation Bar ------------------>
     <nav>
         <div class="nav-left">
             <div class="logo">unwind</div>
@@ -61,10 +61,8 @@
             </div>
         </div>
     </nav>
-    <!-- Fixed Navigation Bar Ends -->
 
-    <!-- FIRST SECTION -->
-    <!-- Stories -->
+    <!------------------ Main Section: Stories ------------------>
     <div class="container">
         <div class="left-sidebar"></div>
 
@@ -99,7 +97,7 @@
 
             <!-- Write New Posts -->
 
-            <div class="write-post-container">
+            <!-- <div class="write-post-container">
                 <form id="postForm" action="submit">
                     <div class="user-profile">
                         <img src="images/user.png">
@@ -110,7 +108,7 @@
                     </div>
 
                     <div class="post-input-container">
-                        <!-- Giphy shows up in textarea -->
+                       
                         <img id="gifImage" alt="" class="center">
                         <textarea id="contentForm" rows="3" placeholder="What's on your mind? (max. 150 characters)"
                             maxlength="150"></textarea>
@@ -125,11 +123,36 @@
                 <input type="text" id="input-giphy" placeholder="Search for GIFs">
                 <button id="giphyButton" class="giphyButton" onclick="sendApiRequest()"> Giphy! </button>
 
-            </div>
+            </div> -->
+
+            <article>
+                <form id="form">
+                    <label for="title">Title</label>
+                    <br>
+                    <input type="text" name="title" id="titleForm" maxlength="50" required />
+                    <p id="titleCount">0/50</p>
+
+                    <label for="description">Description</label>
+                    <br>
+                    <textarea id="descriptionForm" name="description" maxlength="150" required></textarea>
+                    <p id="descriptionCount">0/150</p>
+
+                    <label for="content">Content</label>
+                    <br>
+                    <textarea id="contentForm" name="content" maxlength="10000" required></textarea>
+                    <p id="contentCount">0/10000</p>
+
+                    <label id="gifTitle" for="gif">GIF</label>
+                    <br>
+                    <input type="text" id="gifForm" placeholder="Random GIF" />
+
+                    <br>
+
+                    <input type="submit" id="submitForm" value="Create Post" />
+                </form>
+            </article>
 
             <!-- End of New Posts -->
-
-
 
             <!-- Posts on the Site -->
 
@@ -145,25 +168,26 @@
 
                         </div>
                     </div>
-                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    <!-- <a href="#"><i class="fas fa-ellipsis-v"></i></a> -->
                 </div>
 
                 <!-- <p class="post-text" id="content"></p> -->
-
+                <div class="gifDiv">
+                    <img id="gifImage" alt="" class="center">
+                </div>
                 <div class="post-row">
 
-                    <a href="#" style="color: salmon; position: relative; left: 50px;">View all
-                        comments</a>
+                    <!-- <a href="#" style="color: salmon; position: relative; left: 50px;">View all
+                        comments</a> -->
 
                     <!-- Where Our Reaction Buttons Will Go -->
-                    <div class="activity-icons">
+                    <div id="reactioBar0" class="activity-icons">
 
-                        <div class="commentIcon"><img src="images/comments.png">5</div>
+                        <!-- <div class="commentIcon"><img src="images/comments.png">5</div> -->
                         <div class="like__btn">
-                            <p>
-                                <span id="like"><i class="far fa-thumbs-up"></i></span>
-                                <span id="count">0</span>
-                            </p>
+                            <span id="like"><i class="far fa-thumbs-up"></i></span>
+                            <span id="count">0</span>
+
                         </div>
                         <div class="dislike__btn">
                             <p>
@@ -178,11 +202,23 @@
                             </p>
                         </div>
                     </div>
-                    <div class="post-profile-icon">
+                    <!-- <div class="post-profile-icon">
                         <img src="images/user.png"> <i class="fas fa-caret-down"></i>
-                    </div>
+                    </div> -->
                 </div>
 
+                <div class="commentArea">
+                    <section id="publishedComments0" class="comment-section">
+                    </section>
+                    <h4>Comment:</h4>
+                    <form id="commentForm0" class="comment-form">
+                        <label id="commentLabel0" for="commentInput0"> </label>
+                        <textarea id="commentLabel0" name="commentInput0" class="comment_input" cols="90" rows="3"
+                            placeholder="Share your thoughts!" required="required"></textarea>
+                        <br>
+                        <input type="submitComment0" value="Submit Comment">
+                    </form>
+                </div>
             </div>
             <!---- END OF LOOPING POSTS ----->
 
@@ -203,38 +239,30 @@
                     not my type. Ugh! <a href=""> #NotFair</a></p>
                 <div class="post-row">
 
-                    <!-- <a href="#" style="color: salmon; position: relative; left: 50px;">View all
-                        comments</a> -->
+                    <a href="#" style="position: relative;">View all comments</a>
 
                     <!-- Where Our Reaction Buttons Will Go -->
-                    <!-- <form class="reactions" name="14">
-                        <div class="emoji-div happy-div unselected not-chosen"><label for="like"
-                                class="happy">0</label><input id="emoji" name="dislike" type="submit" value="👍"></div>
+                    <div id="reactioBar0" class="activity-icons" style="margin-right: 10%;">
 
-                        <div class="emoji-div sad-div unselected not-chosen"><label for="dislike"
-                                class="sad">0</label><input id="emoji" name="dislike" type="submit" value="👎"></div>
-                        <div class="emoji-div third-div unselected not-chosen"><label for="happy"
-                                class="third">0</label><input id="emoji" name="happy" type="submit" value="😃"></div>
-                    </form> -->
+                        <!-- <div class="commentIcon"><img src="images/comments.png">5</div> -->
+                        <div class="like__btn">
+                            <span id="like"><i class="far fa-thumbs-up"></i></span>
+                            <span id="count">0</span>
 
-
-                    <!-- <form class="comment-form">
-                        <h4>Comment:</h4>
-                        <textarea name="comment" class="comment_input" cols="90" rows="3"
-                            placeholder="Share your thoughts!"></textarea>
-
-                        <input type="submit" value="send comment" class="fa button send-comment">
-                    </form> -->
-
-                    <section class="comment-section">
-                    </section>
-
-
-
-
-                    <!-- <div class="post-profile-icon">
-                        <i class="fas fa-caret-down"></i>
-                    </div> -->
+                        </div>
+                        <div class="dislike__btn">
+                            <p>
+                                <span id="dislike"><i class="fas fa-thumbs-down"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                        <div class="love__btn">
+                            <p>
+                                <span id="dislike"><i class="fas fa-heart"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -260,13 +288,24 @@
                     <a href="#" style="position: relative; left: 50px;">View all comments</a>
 
                     <!-- Where Our Reaction Buttons Will Go -->
-                    <div class="activity-icons">
+                    <div id="reactioBar0" class="activity-icons">
 
-                        <div class="commentIcon"><img src="images/comments.png">3</div>
+                        <!-- <div class="commentIcon"><img src="images/comments.png">5</div> -->
                         <div class="like__btn">
+                            <span id="like"><i class="far fa-thumbs-up"></i></span>
+                            <span id="count">0</span>
+
+                        </div>
+                        <div class="dislike__btn">
                             <p>
-                                <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                                <span id="count">5 </span> Likes
+                                <span id="dislike"><i class="fas fa-thumbs-down"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                        <div class="love__btn">
+                            <p>
+                                <span id="dislike"><i class="fas fa-heart"></i></span>
+                                <span id="count">0</span>
                             </p>
                         </div>
                     </div>
@@ -274,15 +313,6 @@
                         <img src="images/user.png"> <i class="fas fa-caret-down"></i>
                     </div>
                 </div>
-                <div class="form-container">
-                    <br>
-                    <h4>Comment:</h4>
-                    <div>
-                        <textarea name="comments" class="comments" cols="90"
-                            rows="3">Share your thoughts here!</textarea>
-                    </div>
-                </div>
-
             </div>
 
             <div class="post-container">
@@ -294,7 +324,7 @@
                             <span>March 24 2022, 12:45 PM</span>
                         </div>
                     </div>
-                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    <!-- <a href="#"><i class="fas fa-ellipsis-v"></i></a> -->
                 </div>
                 <p class="post-text">What if Earth is like one of those uncontacted tribes in South America,like the
                     whole Galaxy knows we're here but they've agreed not to contact us until we figure it out for
@@ -305,32 +335,33 @@
                     <a href="#" class="viewComments">View all comments</a>
 
                     <!-- Where Our Reaction Buttons Will Go -->
-                    <div class="activity-icons">
+                    <div id="reactioBar0" class="activity-icons">
 
-                        <div class="commentIcon"><img src="images/comments.png">10</div>
+                        <!-- <div class="commentIcon"><img src="images/comments.png">5</div> -->
                         <div class="like__btn">
+                            <span id="like"><i class="far fa-thumbs-up"></i></span>
+                            <span id="count">0</span>
+
+                        </div>
+                        <div class="dislike__btn">
                             <p>
-                                <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                                <span id="count">5 </span> Likes
+                                <span id="dislike"><i class="fas fa-thumbs-down"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                        <div class="love__btn">
+                            <p>
+                                <span id="dislike"><i class="fas fa-heart"></i></span>
+                                <span id="count">0</span>
                             </p>
                         </div>
                     </div>
+
                     <div class="post-profile-icon">
                         <img src="images/user.png"> <i class="fas fa-caret-down"></i>
                     </div>
                 </div>
                 <br>
-                <div class="form-container">
-                    <form>
-                        <h4>Comment:</h4>
-                        <div>
-                            <textarea name="comments" class="comments" cols="90"
-                                rows="3">Share your thoughts here!</textarea>
-                        </div>
-                        <input class="commentBtn" type="submit" value="Post">
-                    </form>
-                </div>
-
             </div>
 
 
@@ -338,77 +369,74 @@
             <button type="button" class="load-more-btn">Load More</button>
 
         </div>
-        <!-- ----------right sidebar----------- -->
+
+        <!------------------Right sidebar ------------------>
         <div class="right-sidebar">
 
-            <!-- CALENDER -->
-            <div class="sidebar-title">
-                <h4>Calender</h4>
-                <!-- <small><p id="ygt">You've got this!</p>
-            </small> -->
-                <a href="#" id="see-all"> See All</a>
-            </div>
-            <!-- first event -->
-            <div class="event">
-                <div class="left-event">
-                    <h3>8</h3>
-                    <span>April</span>
+            <!----- CALENDER ----->
+            <div>
+                <div class="sidebar-title">
+                    <h4>Calender</h4>
+                    <a href="#" id="see-all"> See All</a>
                 </div>
+                <!-- First event -->
+                <div class="event">
+                    <div class="left-event">
+                        <h3>8</h3>
+                        <span>April</span>
+                    </div>
 
-                <div class="right-event">
-                    <h4>Lap 1 Project Presentation</h4>
-                    <p><i class="fa-solid fa-location-dot" &nbs></i> Futureproof</p>
-                    <a href="#"> More Info</a>
+                    <div class="right-event">
+                        <h4>Lap 1 Project Presentation</h4>
+                        <p><i class="fa-solid fa-location-dot" &nbs></i> Futureproof</p>
+                        <a href="#"> More Info</a>
+                    </div>
                 </div>
-            </div>
-            <!-- second event -->
-            <div class="event">
-                <div class="left-event">
-                    <h3>11</h3>
-                    <span>April</span>
-                </div>
+                <!-- Second event -->
+                <div class="event">
+                    <div class="left-event">
+                        <h3>11</h3>
+                        <span>April</span>
+                    </div>
 
-                <div class="right-event">
-                    <h4>Lap 2 - Databases, Cyber Security and Architecture</h4>
-                    <p><i class="fa-solid fa-location-dot" &nbs></i> Futureproof</p>
-                    <a href="#"> More Info</a>
+                    <div class="right-event">
+                        <h4>Lap 2 - Databases, Cyber Security and Architecture</h4>
+                        <p><i class="fa-solid fa-location-dot" &nbs></i> Futureproof</p>
+                        <a href="#"> More Info</a>
+                    </div>
                 </div>
-            </div>
-            <!-- third event -->
-            <div class="event">
-                <div class="left-event">
-                    <h3>2</h3>
-                    <span>May</span>
-                </div>
+                <!-- Third event -->
+                <div class="event">
+                    <div class="left-event">
+                        <h3>2</h3>
+                        <span>May</span>
+                    </div>
 
-                <div class="right-event">
-                    <h4>Lap 3 - React, TDD, and Environment Management</h4>
-                    <p><i class="fa-solid fa-location-dot" &nbs></i> Futureproof</p>
-                    <a href="#"> More Info</a>
+                    <div class="right-event">
+                        <h4>Lap 3 - React, TDD, and Environment Management</h4>
+                        <p><i class="fa-solid fa-location-dot" &nbs></i> Futureproof</p>
+                        <a href="#"> More Info</a>
+                    </div>
                 </div>
             </div>
             <!-- RANDOM QUOTES -->
 
             <div class="sidebar-title">
-                <h4>Random Quotes Here</h4>
-                <a href="#">Close</a>
+                <a href="./posts.html">All Posts <i class="fas fa-book-reader"></i></a>
             </div>
 
             <div class="sidebar-title">
-                <h4>Advertisement Here</h4>
+                <h4>Advertisement</h4>
                 <a href="#">Close</a>
             </div>
             <img src="images/advert.png" class="sidebar-ad">
         </div>
     </div>
 
-
-
     <div class="footer">
         <p>Unwind Copyright © 2022</p>
     </div>
 
-   
 </body>
 
 </html>

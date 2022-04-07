@@ -136,34 +136,73 @@ function commentSection(form, data, section) {
 
 // ------------------- POST INTO ARRAY BUTTON ------------------ //
 
-const form = document.getElementById("postForm");
+// const form = document.getElementById("postForm");
+// const title = document.getElementById("titleForm");
+// const date = document.getElementById("dateForm");
+// const content = document.getElementById("contentForm");
+// const gif = document.getElementById("gifImage");
+// const comments = document.getElementById("commentForm");
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   const title = event.target.titleForm.value;
+//   const date = event.target.dateForm.value;
+//   const content = event.target.contentForm.value;
+//   const gif = event.target.gifImage.value;
+//   const comments = event.target.commentForm.value;
+
+//   submitPost(title, date, content, gif, comments);
+//   alert("Unwind Post Submitted!");
+//   form.reset();
+//   redirectHome();
+// });
+
+// function submitPost(title, date, content, gif, comments) {
+//   const newPostElements = {
+//     title: title,
+//     date: date,
+//     content: content,
+//     gif: gif,
+//     commments: comments,
+//   };
+
+//   const options = {
+//     method: "POST",
+//     body: JSON.stringify(newPostElements),
+//   };
+
+//   fetch("http://localhost:3000/post", options);
+// }
+
+// function redirectHome() {
+//   window.location.href = "index.html";
+// }
+
+const form = document.getElementById("form");
 const title = document.getElementById("titleForm");
-const date = document.getElementById("dateForm");
+const description = document.getElementById("descriptionForm");
 const content = document.getElementById("contentForm");
-const gif = document.getElementById("gifImage");
-const comments = document.getElementById("commentForm");
+const gif = document.getElementById("gifForm");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const title = event.target.titleForm.value;
-  const date = event.target.dateForm.value;
+  const description = event.target.descriptionForm.value;
   const content = event.target.contentForm.value;
-  const gif = event.target.gifImage.value;
-  const comments = event.target.commentForm.value;
+  const gif = event.target.gifForm.value;
 
-  submitPost(title, date, content, gif, comments);
-  alert("Unwind Post Submitted!");
+  submitPost(title, description, content, gif);
+  alert("Post created");
   form.reset();
   redirectHome();
 });
 
-function submitPost(title, date, content, gif, comments) {
+function submitPost(title, description, content, gif) {
   const newPostElements = {
     title: title,
-    date: date,
+    description: description,
     content: content,
     gif: gif,
-    commments: comments,
   };
 
   const options = {
@@ -171,7 +210,7 @@ function submitPost(title, date, content, gif, comments) {
     body: JSON.stringify(newPostElements),
   };
 
-  fetch("http://localhost:3000/post", options);
+  fetch("http://localhost:3000/posts/newpost", options);
 }
 
 function redirectHome() {

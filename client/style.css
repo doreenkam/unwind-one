@@ -26,8 +26,8 @@
 
 body {
   /* background: #D4E4F7; */
-  background: rgb(35,106,185);
-  background: linear-gradient(180deg, rgba(35,106,185,1) 0%, rgba(252,115,7,1) 99%, rgba(52,28,9,1) 100%);
+  background: rgb(52,28,9);
+  background: radial-gradient(circle, rgba(52,28,9,1) 5%, rgba(252,115,7,1) 22%, rgba(35,106,185,1) 79%);
   transition: background 0.3s;
 }
 
@@ -170,7 +170,7 @@ ul li a img {
 }
 
 .right-sidebar {
-  background-color: rgb(230, 126, 34, 0.6);
+  background: rgb(52, 28, 9, 0.4) ;
   flex-basis: 32%;
   position: sticky;
   top: 70px;
@@ -389,12 +389,52 @@ ul li a img {
 /* ------------write post --------- */
 .write-post-container {
   width: 100%;
-  background: var(--bg-color);
+  background: rgb(52, 28, 9, 0.8) ;
   border-radius: 6px;
   padding: 30px;
   color: #626262;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow:rgba(0, 0, 0, 0.5);
 }
+
+
+.post-input-container {
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: white;
+}
+
+.write-post-title {
+  color: bisque
+}
+
+.post-input-container textarea {
+  width: 93%;
+  height: 90px;
+  border: 0;
+  outline: 0;
+  color: white;
+  border-bottom: 1px solid rgb(30, 30, 30);
+  resize: none;
+  font-size: 20px;
+  background: transparent;
+}
+
+#titleForm {
+  margin-left: 10px;
+  width: 100px;
+  height: 25px;
+  cursor:auto;
+  background-color: #a3b3d9;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+
+#titleForm:hover{
+  opacity: 0.5;
+}
+
 
 .user-profile {
   display: flex;
@@ -418,23 +458,6 @@ ul li a img {
   font-size: 15px;
 }
 
-.post-input-container {
-  padding-left: 50px;
-  padding-top: 25px;
-}
-
-
-.post-input-container textarea {
-  width: 93%;
-  height: 90px;
-  border: 0;
-  outline: 0;
-  color: white;
-  border-bottom: 1px solid rgb(30, 30, 30);
-  resize: none;
-  font-size: 20px;
-  background: transparent;
-}
 
 .add-post-links {
   display: flex;
@@ -1005,7 +1028,7 @@ form .options .list {
   width: 500px;
   height: 30px;
   cursor: pointer;
-  background-color: #236AB9;
+  background-color: #341C09;
   color: rgb(255, 255, 255);
   font-size: 20spx;
   border-radius: 7px;
@@ -1262,20 +1285,5 @@ textarea {
   margin-bottom: 20px;
   margin-top: 5px;
   border-radius: 4px;
-}
-
-#titleForm {
-  margin-left: 10px;
-  width: 100px;
-  height: 25px;
-  cursor:auto;
-  background-color: #341C09;
-  border-radius: 5px;
-  text-align: center;
-  border: none;
-}
-
-#titleForm:hover{
-  opacity: 0.5;
 }
 

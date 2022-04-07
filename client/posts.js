@@ -2,27 +2,6 @@ const postSection = document.getElementById("postSection");
 const searchBar = document.getElementById("searchBar");
 const main = document.getElementById("main");
 
-// searchBar.addEventListener("submit", (event) => {
-//     event.preventDefault();
-//     document.getElementById("postSection").remove();
-//     const postSection = document.createElement("section");
-//     postSection.setAttribute("id", "postSection");
-//     main.append(postSection);
-//     let searchTerm = event.target.search.value; // handle '&'
-//     let newSearchTerm = "";
-//     for(let i = 0; i < searchTerm.length; i++){
-//         let letter = searchTerm[i];
-//         if (letter === "&"){
-//             newSearchTerm += "%26";
-//         } else {
-//             newSearchTerm += letter;
-//         }
-//     };
-//     fetch(`http://localhost:3000/posts/search/allPosts?q=${newSearchTerm}`)
-//     .then((r) => r.json())
-//     .then((data) => displayPosts(data));
-// })
-
 fetch("http://localhost:3000/posts")
   .then((r) => r.json())
   .then((data) => displayPosts(data));
@@ -169,16 +148,3 @@ function reactionCount(button, count, id, type) {
     button.disabled = true;
   });
 }
-
-// To the top button //
-const buttonToTop = document.getElementById("buttonToTop");
-buttonToTop.addEventListener("click", () => {
-  // window.scrollTo(0, 0);
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behaviour: "smooth",
-  });
-});
-// End of "scroll to the top" button//
-

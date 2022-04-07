@@ -105,6 +105,7 @@
                     <div class="user-profile">
                         <img src="images/user.png">
                         <div>
+
                             <p id="titleForm">Anonymous #16</p>
                             <span id="dateForm">April 8, 2022, 15:15pm</span>
                         </div>
@@ -128,37 +129,45 @@
 
             </div> -->
 
-            <article>
-                <form id="form">
-                    <label for="title">Title</label>
-                    <br>
-                    <input type="text" name="title" id="titleForm" maxlength="50" required />
-                    <p id="titleCount">0/50</p>
+            <article class="write-post-container">
+                <form id="postform">
+                    <div class="user-profile">
+                        <img src="images/user.png">
+                    
 
-                    <label for="description">Description</label>
-                    <br>
-                    <textarea id="descriptionForm" name="description" maxlength="150" required></textarea>
-                    <p id="descriptionCount">0/150</p>
+                    <!-- DATA -->
+                    <label for="title"> Anonymous #ID </label>
+                    
+                    <input type="text" name="title" id="titleForm" class="titleInput" required />
+                </div>
+                    <!-- CONTENT -->
+                    <div class="post-input-container">
 
-                    <label for="content">Content</label>
-                    <br>
-                    <textarea id="contentForm" name="content" maxlength="10000" required></textarea>
-                    <p id="contentCount">0/10000</p>
+                        <label for="contentForm"></label>
+                        <br>
 
-                    <label id="gifTitle" for="gif">GIF</label>
-                    <br>
-                    <input type="text" id="gifForm" placeholder="Random GIF" />
+                        <img id="gifImage" alt="" class="center">
 
+                        <textarea id="contentForm" rows="3" name="content" maxlength="150"
+                            placeholder="What's on your mind? (max. 150 characters)" required></textarea>
+                    </div>
+
+                    <!-- GIPHY  -->
+
+                    <label id="gifTitle" for="gif"></label>
+                    <input type="text" id="inputGiphy" placeholder="Search for GIFs">
+                    <button id="giphyButton" class="giphyButton" onclick="sendApiRequest()"> Giphy! </button>
                     <br>
 
-                    <input type="submit" id="submitForm" value="Create Post" />
+                    <input style="margin-top: 10px;" class="postBtn" type="submit" id="submitForm"
+                        value="Create Post" />
+
                 </form>
             </article>
 
 
 
             <!------------------- Main Section : POSTS ------------------>
-
             <!-- Filler Post One -->
             <div class="post-container">
                 <div class="post-row">
@@ -298,11 +307,7 @@
                 </div>
                 <br>
             </div>
-
-
-
             <button type="button" class="load-more-btn">Load More</button>
-
         </div>
 
         <!------------------ Right sidebar ------------------>
@@ -366,14 +371,12 @@
         </div>
     </div>
     </div>
-
     <!----------------- Footer -------------->
 
     <div class="footer">
         <p>Unwind Copyright © 2022</p>
     </div>
 
-    
 </body>
 
 </html>

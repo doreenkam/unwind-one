@@ -29,8 +29,8 @@ Ever had those random thoughts that are on the borderline of a consipiracy or ma
 - CSS
 - Bootstrap
 - Node.Js
--   Express
--   Jest
+- Express
+- Jest
 - Fontawesome
 - Trello
 - Figma
@@ -45,7 +45,7 @@ We then collaborated on building a template of our desired website design using 
 LICENCE : ???
 
 ### Achievements :
-- # Created a project that we are collectively proud of
+- Created a project that we are collectively proud of
 
 ### Licence :
 

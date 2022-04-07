@@ -395,7 +395,7 @@ ul li a img {
 /* ------------write post --------- */
 .write-post-container {
   width: 100%;
-  background: rgb(52, 28, 9, 0.5);;
+  background: rgb(52, 28, 9, 0.5);
   border-radius: 6px;
   padding: 30px;
   color: #626262;
@@ -1192,60 +1192,40 @@ textarea {
 .like__btn {
   display: inline-block;
   position: relative;
-  left: 0px;
+  left: 200px;
   height: 30px;
   padding: 5px 5px 5px 10px;
-  background: #569aff;
-  font-size: 12px;
+  background: #009dff;
+  font-size: 16px;
   font-weight: 600;
-  padding: 10px;
-  border: none;
-  border-radius: 50px;
+  border: 1px solid rgb(249, 191, 170);
+  border-radius: 5px;
   width: 75px;
   color: #ffffff;
   cursor: pointer;
 }
 
 .like__btn:hover {
-  background: #32bbff;
+  background: #7cd3ff;
 }
 
 .dislike__btn {
   position: relative;
-  left: 10px;
+  left: 210px;
   height: 30px;
   padding: 5px 5px 5px 10px;
-  background: #ff5656;
-  font-size: 12px;
+  background: #ff3b3b;
+  font-size: 16px;
   font-weight: 600;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
+  border: 1px solid rgb(249, 191, 170);
+  border-radius: 5px;
   width: 75px;
   color: #ffffff;
   cursor: pointer;
 }
 
-.love__btn {
-  position: relative;
-  left: 98px;
-  height: 30px;
-  padding: 5px 5px 5px 10px;
-  background: #ff56ad;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 10px;
-  border-radius: 50px;
-  color: #ffffff;
-  cursor: pointer;
-}
-
 .dislike__btn:hover {
-  background: #cd1d1d;
-}
-
-.love__btn:hover {
-  background: #ff3287;
+  background: #ff6060;
 }
 
 /* Emoji Styling */

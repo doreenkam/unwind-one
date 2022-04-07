@@ -296,6 +296,64 @@ ul li a img {
   bottom: 5px;
 }
 
+/* ---------------- POSTS.html RIGHT SIDEBAR ------- */
+  .sidebar-title-blog{
+    color:#236AB9;
+    font-family: ‘Corben’, cursive;
+    border-bottom: #595959;
+    display: inline-block;
+  }
+
+  .sidebar-title-blog h3 {
+    text-align: center;
+  }
+
+  .sidebar-title-blog a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #1876f2;
+  }
+
+  .blogpost-title{
+    color:#FC7307;
+    border-bottom: #595959;
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .blogpost-title h4 {
+    font-size: 14px;
+  }
+
+  .blogpost-title span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #236ab9;
+    color: white;
+    font-size: 10px;
+    padding: 4px 0;
+    text-align: center;
+  }
+
+  .blogpost-title a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #1876f2;
+  }
+
+  .blog-post-cover {
+    width:100%;
+    height:auto;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+  }
+
+  
+
 /* ------------------ main content ------------- */
 
 /* -------story-------- */
@@ -1089,7 +1147,7 @@ textarea {
   left: 40px;
 }
 
-/* Calendar Styling */
+/*----------- Calendar Styling ------------*/
 
 .right-sidebar {
   font-family: "poppins", sans-serif;

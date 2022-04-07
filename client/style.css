@@ -394,7 +394,7 @@ ul li a img {
 /* ------------write post --------- */
 .write-post-container {
   width: 100%;
-  background: rgba(88, 52, 23, 0.642);
+  background: rgb(52, 28, 9, 0.5);;
   border-radius: 6px;
   padding: 30px;
   color: #626262;

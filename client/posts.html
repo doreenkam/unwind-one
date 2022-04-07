@@ -13,16 +13,123 @@
 </head>
 
 <body>
-    <main id="main">
-        <h1 class="topTitles">All Posts</h1>
-        <button id="buttonToTop">
-            <i class="fa fa-chevron-up" aria-hidden="true" style="font-size: 25px;"></i>
-        </button>
-        <section id="postSection">
-            <!--To the top button-->
-            <!--End of top button-->
-        </section>
-    </main>
+
+    <!---------------------- Navigation Bar ------------------>
+
+    <nav>
+        <div class="nav-left">
+            <div class="logo">unwind</div>
+            <ul class="filter">
+                <li><a href="#"><img src="images/notif.png" alt="notifIcon"> </a></li>
+                <li><a href="#"><img src="images/inbox.png" alt="imagesIcon"> </a></li>
+                <li>
+                <li><a href="#"><img src="images/stories.png" alt="storiesIcon"> </a></li>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Search Bar & User Icon on NavBar-->
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="images/user.png">
+            </div>
+
+        </div>
+        <!-- ------ Drop Down Menu on User Icon ---------->
+        <div class="settings-menu">
+            <div id="dark-btn">
+                <span></span>
+            </div>
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="images/user.png">
+                    <div>
+                        <p>Anonymous</p>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="settings-links">
+                    <img src="images/setting.png" class="settings-icon">
+                    <a href="">Settings & Privacy <img src="images/arrow.jpeg" width="10px"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/help.png" class="settings-icon">
+                    <a href="">Help & Support <img src="images/arrow.jpeg" width="10px"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!------------------- Main Section: NEW POSTS! -------------->
+    <div class="container">
+        <div class="left-sidebar"></div>
+
+        <div class="main-content">
+
+            <div class="post-container">
+
+                <main id="main">
+                    <h1 class="topTitles">All Posts</h1>
+                    <button id="buttonToTop">
+                        <i class="fa fa-chevron-up" aria-hidden="true" style="font-size: 25px;"></i>
+                    </button>
+                    <section id="postSection">
+                        <!--To the top button-->
+                        <!--End of top button-->
+                    </section>
+                </main>
+
+            </div>
+
+        </div>
+        <!---------------- END OF Main Section ------------>
+
+
+        <!---------------- Right Sidebar ------------------>
+        <div class="right-sidebar">
+
+            <div class=“sidebar-title-blog”>
+                <h3>Blogs We Know You’ll Love!</h3>
+                <a href=“#”><small>Refresh</small></a>
+            </div>
+            <!-- first blog post -->
+            <div class=“blogpost-title”>
+                <h4>Staying Motivated</h4>
+                <small><em><span style=color:gray>By Anony Mouse</span></em></small>
+            </div>
+            <a href=“#”><small>Read more</small></a>
+            <img src=“images/smaller-quote10.png” class=“blog-post-cover”>
+             <!-- second blog post -->
+             <div class=“blogpost-title”>
+                <h4>Persevering</h4>
+                <small><em><span style=color:gray> By Un Named</span></em></small>
+            </div>
+            <small><a href=“#”>Read more</a></small>
+            <img src=“images/smaller-quote3.png” class=“blog-post-cover”>
+             <!-- ADVERT -->
+             <div class=“sidebar-title”>
+                <h4>Advertisement Here</h4>
+                <a href=“#”>Close</a>
+            </div>
+            <img src=“images/advert.png” class=“sidebar-ad”>
+
+        </div>
+        <!--------- END OF RIGHT SIDEBAR ---------->
+
+
+    </div>
+    <!--------- END OF CONTAINER FOR PAGE ----->
+
+
+   
+
+
 </body>
 
 </html>

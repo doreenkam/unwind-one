@@ -44,7 +44,6 @@ npm install coverage -D`
 Ensure the package.json file contains the following:
 
 ```
-
 "scripts": {
     "start": "nodemon index.js",
     "test": "jest --silent --watchAll",
@@ -60,7 +59,6 @@ Ensure the package.json file contains the following:
     "nodemon": "^2.0.15",
     "supertest": "^6.2.2"
   }
-
 ```
 
 ### Usage

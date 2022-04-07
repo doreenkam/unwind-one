@@ -994,7 +994,7 @@ form .options .list {
   box-shadow: 0 0 20px #eee;
 }
 
-#input-giphy {
+#inputGiphy {
   margin-left: 100px;
   margin-top: 10px;
   width: 250px;
@@ -1010,7 +1010,7 @@ form .options .list {
   box-shadow: 0 0 20px #eee;
 }
 
-#input-giphy:hover {
+#inputGiphy:hover {
   opacity: 0.8;
 }
 

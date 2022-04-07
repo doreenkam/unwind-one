@@ -35,7 +35,7 @@ if (localStorage.getItem("theme") == "light") {
 let gifLink = "";
 
 function sendApiRequest() {
-  let userInput = document.getElementById("input-giphy").value;
+  let userInput = document.getElementById("inputGiphy").value;
   console.log(userInput);
 
   const giphyApiKey = "01YtqfkM52wCXgAyJ2YbXdE2aoOyXPdF";
@@ -58,18 +58,18 @@ function sendApiRequest() {
 
 // --------------- Create Post Output ----------- //
    
-const form = document.getElementById("form");
+const form = document.getElementById("postform");
 const title = document.getElementById("titleForm");
 const description = document.getElementById("descriptionForm");
 const content = document.getElementById("contentForm");
-const gif = document.getElementById("gifForm");
+const gif = document.getElementById("inputGiphy");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const title = event.target.titleForm.value;
   const description = event.target.descriptionForm.value;
   const content = event.target.contentForm.value;
-  const gif = event.target.gifForm.value;
+  const gif = event.target.inputGiphy.value;
 
   submitPost(title, description, content, gif);
   alert("Post created");

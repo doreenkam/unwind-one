@@ -26,13 +26,8 @@
 
 body {
   /* background: #D4E4F7; */
-  background: rgb(52, 28, 9);
-  background: radial-gradient(
-    circle,
-    rgba(52, 28, 9, 1) 5%,
-    rgba(252, 115, 7, 1) 22%,
-    rgba(35, 106, 185, 1) 79%
-  );
+  background: rgb(35, 106, 185);
+  background: linear-gradient(180deg, rgba(35, 106, 185, 1) 0%, rgba(252, 115, 7, 1) 99%, rgba(52, 28, 9, 1) 100%);
   transition: background 0.3s;
 }
 
@@ -1246,6 +1241,7 @@ textarea {
   height: 30px;
   width: 30px;
 }
+
 /* ---Blog Styling --- */
 .sidebar-title-blog {
   color: #341c09;
@@ -1265,4 +1261,19 @@ textarea {
   margin-bottom: 20px;
   margin-top: 5px;
   border-radius: 4px;
+}
+
+#titleForm {
+  margin-left: 10px;
+  width: 100px;
+  height: 25px;
+  cursor: auto;
+  background-color: bisque;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+
+#titleForm:hover {
+  opacity: 0.5;
 }

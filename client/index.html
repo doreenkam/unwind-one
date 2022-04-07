@@ -8,12 +8,11 @@
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 
     <script defer src="script.js"></script>
-    <script defer src="posts.js"></script>
 </head>
 
 <body>
 
-    <!------------------ Navigation Bar ------------------>
+    <!-- ******************** Navigation Bar ******************** -->
     <nav>
         <div class="nav-left">
             <div class="logo" style="cursor: p;">unwind</div>
@@ -22,11 +21,12 @@
                 <li><a href="#"><img src="images/inbox.png" alt="imagesIcon"> </a></li>
                 <li>
                 <li><a href="#"><img src="images/stories.png" alt="storiesIcon"> </a></li>
-                </li>
+
             </ul>
         </div>
 
-        <!-- Search Bar & User Icon on NavBar-->
+        <!-- All Posts on NavBar-->
+
         <div class="nav-right">
             <a class="allposts" href="./posts.html"> See All Posts</a>
             <div class="nav-user-icon online" onclick="settingsMenuToggle()">
@@ -34,7 +34,8 @@
             </div>
 
         </div>
-        <!-- ------ Drop Down Menu on User Icon ---------->
+
+        <!-- Drop Down Menu on User Icon-->
         <div class="settings-menu">
             <div id="dark-btn">
                 <span></span>
@@ -59,10 +60,8 @@
             </div>
         </div>
     </nav>
-
-
-
-    <!------------------ Main Section: Stories ------------------>
+    <!--- ****************  Main Section ***************** -->
+    <!-- Stories -->
     <div class="container">
 
         <div class="left-sidebar"></div>
@@ -93,39 +92,8 @@
                     <p> Staying Active </p>
                 </div>
             </div>
-            <!-- End of Stories -->
 
-
-            <!-- Write New Posts -->
-
-            <!-- <div class="write-post-container">
-                <form id="postForm" action="submit">
-                    <div class="user-profile">
-                        <img src="images/user.png">
-                        <div>
-
-                            <p id="titleForm">Anonymous #16</p>
-                            <span id="dateForm">April 8, 2022, 15:15pm</span>
-                        </div>
-                    </div>
-
-                    <div class="post-input-container">
-                       
-                        <img id="gifImage" alt="" class="center">
-                        <textarea id="contentForm" rows="3" placeholder="What's on your mind? (max. 150 characters)"
-                            maxlength="150"></textarea>
-
-                        <div class="add-post-links">
-                            <button type="submit" onlclick="location.reload()" class="postBtn" id="getPosts"
-                                value="Post">Post</button>
-                        </div>
-                    </div>
-                </form>
-
-                <input type="text" id="input-giphy" placeholder="Search for GIFs">
-                <button id="giphyButton" class="giphyButton" onclick="sendApiRequest()"> Giphy! </button>
-
-            </div> -->
+            <!-- Post Creation -->
 
             <article class="write-post-container">
                 <form id="postform">
@@ -137,29 +105,23 @@
                         <label class="write-post-title" for="title"> Anonymous #ID </label>
                         <input type="text" name="title" id="titleForm" placeholder="username" required />
                     </div>
-                    <!-- CONTENT -->
+
                     <div class="post-input-container">
 
-                        <label for="contentForm"></label>
+                        <label for=""></label>
                         <br>
-
 
                         <textarea id="contentForm" rows="3" name="content" maxlength="150"
                             placeholder="What's on your mind? (max. 150 characters)" required> </textarea>
+                        <!-- GIPHY -->
 
-                        <img id="gifImage" alt="" class="center">
                         <label id="gifTitle" for="gif"></label>
                         <input type="text" id="inputGiphy" placeholder="Search for GIFs">
 
-                        <div id="giphyButton" class="giphyButton" value="Giphy!" onclick="sendApiRequest()"></div>
-
+                    <!-- <input id="giphyButton" class="giphyButton" value="Giphy!" onclick="sendApiRequest()"> -->
                         <br>
 
                     </div>
-
-                    <!-- GIPHY  -->
-
-
                     <input style="margin-top: 10px;" type="submit" class="postBtn" id="submitForm"
                         value="Create Post" />
 
@@ -168,7 +130,8 @@
 
 
 
-            <!------------------- Main Section : POSTS ------------------>
+            <!-- POSTS -->
+
             <!-- Filler Post One -->
             <div class="post-container">
                 <div class="post-row">
@@ -188,7 +151,7 @@
                     <a href="#" class="viewComments">View all comments</a>
 
 
-                    <!------- Reaction Buttons -------->
+                    <!-- Reaction Buttons-->
                     <div id="reactioBar0" class="activity-icons">
 
                         <!-- <div class="like__btn">
@@ -237,7 +200,27 @@
                     <a href="#" class="viewComments">View all comments</a>
 
 
-                    <!------- Reaction Buttons -------->
+                    <!-- Reaction Buttons -->
+                    <div id="reactioBar0" class="activity-icons">
+
+                        <div class="like__btn">
+                            <p><span id="like"><i class="far fa-thumbs-up"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                        <div class="dislike__btn">
+                            <p>
+                                <span id="dislike"><i class="fas fa-thumbs-down"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                        <div class="love__btn">
+                            <p>
+                                <span id="dislike"><i class="fas fa-heart"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                    </div>
 
                     <div class="post-profile-icon">
                         <img src="images/user.png"> <i class="fas fa-caret-down"></i>
@@ -263,6 +246,29 @@
                 <div class="post-row">
                     <a href="#" class="viewComments">View all comments</a>
 
+
+                    <!-- Reaction Buttons -->
+                    <div id="reactioBar0" class="activity-icons">
+
+                        <div class="like__btn">
+                            <p><span id="like"><i class="far fa-thumbs-up"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                        <div class="dislike__btn">
+                            <p>
+                                <span id="dislike"><i class="fas fa-thumbs-down"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                        <div class="love__btn">
+                            <p>
+                                <span id="dislike"><i class="fas fa-heart"></i></span>
+                                <span id="count">0</span>
+                            </p>
+                        </div>
+                    </div>
+
                     <div class="post-profile-icon">
                         <img src="images/user.png"> <i class="fas fa-caret-down"></i>
                     </div>
@@ -272,10 +278,10 @@
             <button type="button" class="load-more-btn">Load More</button>
         </div>
 
-        <!------------------ Right sidebar ------------------>
+        <!-- ********* Right sidebar ********* -->
         <div class="right-sidebar">
 
-            <!----- CALENDER ----->
+            <!-- CALENDER -->
             <div>
                 <div class="sidebar-title">
                     <h4>Calender</h4>
@@ -321,6 +327,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Advertisement Filler -->
 
             <div class="sidebar-title">
                 <h4>Advertisement</h4>
@@ -330,7 +337,7 @@
         </div>
     </div>
     </div>
-    <!----------------- Footer -------------->
+    <!-- **************** Footer ***************** -->
 
     <div class="footer">
         <p>Unwind Copyright © 2022</p>

@@ -32,50 +32,52 @@ if (localStorage.getItem("theme") == "light") {
 
 // --------------- Giphy Search Function ----------- //
 
-let gifLink = "";
+// let gifLink = "";
 
-function sendApiRequest() {
-  let userInput = document.getElementById("inputGiphy").value;
-  console.log(userInput);
+// function sendApiRequest() {
+//   let userInput = document.getElementById("inputGiphy").value;
+//   console.log(userInput);
 
-  const giphyApiKey = "01YtqfkM52wCXgAyJ2YbXdE2aoOyXPdF";
+//   const giphyApiKey = "01YtqfkM52wCXgAyJ2YbXdE2aoOyXPdF";
 
-  const giphyApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&api_key=${giphyApiKey}`;
+//   const giphyApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&api_key=${giphyApiKey}`;
 
-  fetch(giphyApiURL)
-    .then(function (data) {
-      return data.json();
-    })
-    .then(function (json) {
-      let index = Math.floor(Math.random() * json.data.length);
-      console.log(json.data[0].images.fixed_height.url);
-      let imagePath = json.data[index].images.fixed_height.url;
-      let gifImage = document.querySelector("#gifImage");
-      gifImage.setAttribute("src", imagePath);
-      gifLink = imagePath;
-    });
-}
+//   fetch(giphyApiURL)
+//     .then(function (data) {
+//       return data.json();
+//     })
+//     .then(function (json) {
+//       let index = Math.floor(Math.random() * json.data.length);
+  
+//       let imagePath = json.data[index].images.fixed_height.url;
+
+//       let gifImage = document.querySelector("#gifImage");
+//       gifImage.setAttribute("src", imagePath);
+//       gifLink = imagePath;
+//     });
+// }
 
 // --------------- Create Post Output ----------- //
 
 const form = document.getElementById("postform");
 const title = document.getElementById("titleForm");
 const content = document.getElementById("contentForm");
-const gif = document.getElementById("gifImage");
+const gif = document.getElementById("inputGiphy");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const title = event.target.titleForm.value;
   const content = event.target.contentForm.value;
-  const gif = event.target.gifImage.value;
+  const gif = event.target.inputGiphy.value;
 
   submitPost(title, content, gif);
-  alert("Post created");
+  // alert("Post created");
   form.reset();
   redirectHome();
+  window.location.href = "posts.html";
 });
 
-function submitPost(title, description, content, gif) {
+function submitPost(title, content, gif) {
   const newPostElements = {
     title: title,
     content: content,

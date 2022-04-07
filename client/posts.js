@@ -1,5 +1,4 @@
 const postSection = document.getElementById("postSection");
-const searchBar = document.getElementById("searchBar");
 const main = document.getElementById("main");
 
 fetch("http://localhost:3000/posts")
@@ -8,28 +7,41 @@ fetch("http://localhost:3000/posts")
 
 function displayPosts(posts) {
   for (post of posts) {
-    // Article
-    const article = document.createElement("article");
+    // Creating the article container for the post and append to post page
+
+    const article = document.createElement(`article`);
+
+    article.style.border = "#341C09 3px solid";
+    article.style.marginBottom = "30px";
+    article.style.borderRadius = "10px";
+    article.style.textAlign = "center";
+
     article.setAttribute("id", `post${post.id}`);
     document.getElementById("postSection").append(article);
 
-    // Creating Header / Title
-    const title = document.createElement("h2");
+    // Creating the title for the post and adding to the article
+
+    const title = document.createElement("h1");
+    title.style.fontSize = "35px";
+    title.style.color = "#341C09";
     title.setAttribute("id", `title${post.id}`);
     title.textContent = post.title;
     article.append(title);
 
-    // The Body of Post
+    // Creating the content and adding to the article
+
     const main = document.createElement("p");
+    main.style.fontSize = "20px";
     main.setAttribute("id", `main${post.id}`);
     main.textContent = post.content;
     article.append(main);
-    //gif//
 
-    // Appending the Gif to the Div
+    //Creating a div element for gif and adding to article
+
     const gifDiv = document.createElement("div");
     gifDiv.setAttribute("id", "gifDiv");
     article.append(gifDiv);
+
     const giphy = document.createElement("img");
     const url = `http://api.giphy.com/v1/gifs/search?q=${post.gif}&api_key=JRAJgNDb1SCjVI5M9EcLC24CFEBZt6ys&offset=${post.id}&rating=g&limit=1`;
     fetch(url)
@@ -41,6 +53,7 @@ function displayPosts(posts) {
         gifDiv.style.textAlign = "center";
         gifDiv.append(giphy);
       })
+      // Catch error if there is no gif entry
       .catch(function () {
         console.log("No GIF found");
       });
@@ -65,6 +78,7 @@ function displayPosts(posts) {
     dislike.setAttribute("class", "fas fa-thumbs-down dislike__btn");
     dislike.textContent = ` ${post.reaction.dislike}`;
     reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
+
     reactionBtns.append(dislike);
 
     // const love = document.createElement("button");
@@ -76,32 +90,31 @@ function displayPosts(posts) {
 
     // Comments Area
     const commentsArea = document.createElement("div");
+    commentsArea.style.borderTop = "black 1px solid";
+
     commentsArea.setAttribute("class", "commentsArea");
     article.append(commentsArea);
 
-    // Published Comments
+    // Comments retrieved from to database
+
     const publishedComments = document.createElement("div");
     publishedComments.setAttribute("id", `publishedComments${post.id}`);
     commentsArea.append(publishedComments);
 
     const commentHeader = document.createElement("h3");
     commentHeader.setAttribute("id", "commentHeader");
+    commentHeader.style.marginLeft = "30px";
     commentHeader.textContent = "Comments";
     publishedComments.append(commentHeader);
 
-    // For printing the comments
-    for (const comment of post.comments) {
-      const commentP = document.createElement("p");
-      commentP.textContent = comment;
-      publishedComments.append(commentP);
-    }
-
-    // For to add commentss
+    // Add commentss
     const commentForm = document.createElement("form");
+    commentForm.style.opacity = "0.5";
+    commentForm.style.marginLeft = "30px";
     commentForm.setAttribute("id", `commentForm${post.id}`);
     commentsArea.append(commentForm);
 
-    // Input label for the text ar
+    // Input label for the text
     const commentLabel = document.createElement("label");
     commentLabel.setAttribute("id", `commentLabel${post.id}`);
     commentLabel.setAttribute("for", `commentInput${post.id}`);
@@ -109,9 +122,12 @@ function displayPosts(posts) {
 
     // Text input input
     const commentInput = document.createElement("textarea");
+    commentInput.style.width = "500px";
+    commentInput.style.border = "none";
+    commentInput.style.borderRadius = "7px";
     commentInput.setAttribute("id", `commentInput${post.id}`);
     commentInput.setAttribute("name", `commentInput${post.id}`);
-    commentInput.setAttribute("placeholder", " Write your comment here...");
+    commentInput.setAttribute("placeholder", " Let us know what you think!");
     commentInput.setAttribute("required", "required");
     commentInput.style.width = "550px";
     commentForm.append(commentInput);
@@ -120,6 +136,15 @@ function displayPosts(posts) {
     commentForm.append(br);
 
     const submitComment = document.createElement("input");
+    submitComment.style.width = "500px";
+    submitComment.style.height = "30px";
+    submitComment.style.cursor = "pointer";
+    submitComment.style.backgroundColor = "#6491fb";
+    submitComment.style.color = "rgb(255, 255, 255)";
+    submitComment.style.borderRadius = "7px";
+    submitComment.style.border = "none";
+    submitComment.style.marginBottom = "10px";
+
     submitComment.setAttribute("id", `submitComment${post.id}`);
     submitComment.setAttribute("type", "submit");
     submitComment.setAttribute("value", "Submit Comment");

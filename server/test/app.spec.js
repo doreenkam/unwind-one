@@ -26,6 +26,31 @@ describe("API Server", () => {
   });
 
   it("readJSON works", (done) => {
-    request(api).post("/posts").expect("Content-Type", /json/).expect(200, done);
+    request(api)
+      .post("/posts")
+      .expect("Content-Type", /json/)
+      .expect(200, done);
   });
+
+  it("find new post", (done) => {
+    request(api).get("/posts/findpost").expect(200, done);
+  });
+
+  it("finds post with specified id", (done) => {
+    request(api)
+      .get("/posts/findpost")
+      .expect("Content-Type", /json/)
+      .expect(200, done);
+  });
+
+  it("readJSON and writeJSON functioning", (done) => {
+    request(api)
+      .post("/posts/newpost")
+      .expect("Content-Type", /html/, done)
+  });
+
+  it("return comments", (done) => {
+    request(api).post("/posts/newpost").expect("Content-Type", /html/, done)
+  });
+
 });

@@ -125,18 +125,13 @@ app.post("/posts/newcomment", (req, res) => {
   writeJSON(posts);
 });
 
-app.get("/posts/postid", (req, res) => {
-  singlePostId = req.query.id;
-});
+// app.get("/posts/postid", (req, res) => {
+//   singlePostId = req.query.id;
+// });
 
-app.get("/posts/singlepost", (req, res) => {
-  res.send(JSON.stringify(posts[singlePostId]));
-});
+// app.get("/posts/singlepost", (req, res) => {
+//   res.send(JSON.stringify(posts[singlePostId]));
+// });
 
-// ------> PLEASE CHECK ABOVE IN ENDPOINTS SECTION IF CORRENT FOR COMMENTS!
-
-// ------> GIPHY endpoint / API & function (if necessary)
-
-// -------> REACTION button endpoint & function (if necessary)
 
 module.exports = app;

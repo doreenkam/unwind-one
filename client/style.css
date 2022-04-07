@@ -1028,6 +1028,8 @@ form .options .list {
 }
 
 .postBtn {
+  position: relative;
+  left: 50px;
   width: 500px;
   height: 30px;
   cursor: pointer;
@@ -1041,7 +1043,7 @@ form .options .list {
 }
 
 #inputGiphy {
-  margin-left: 70px;
+  margin-left: 125px;
   margin-top: 10px;
   width: 250px;
   height: 30px;
@@ -1063,7 +1065,7 @@ form .options .list {
 
 .giphyButton {
   position: relative;
-  left: 150px;
+  left: 200px;
   margin-top: 10px;
   width: 100px;
   height: 30px;

@@ -1269,14 +1269,14 @@ textarea {
 }
 /* ---Blog Styling --- */
 .sidebar-title-blog {
-  color: #236ab9;
+  color: #341c09;
   font-family: "Corben", cursive;
   border-bottom: #595959;
   display: inline-block;
 }
 
 .blogpost-title {
-  color: #fc7307;
+  color: white;
   border-bottom: #595959;
 }
 

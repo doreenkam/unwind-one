@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "jest --silent --watchAll",
+    "test": "jest --silent --watchAll --detectOpenHandles",
     "coverage": "jest --coverage --silent"
   },
   "keywords": [],

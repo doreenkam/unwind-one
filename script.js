@@ -208,7 +208,6 @@ function displayPosts(posts) {
     content.setAttribute("id", `content${post.id}`);
     content.textContent = post.content;
     newPost.append(content);
-    
   }
 }
 

@@ -429,6 +429,7 @@ ul li a img {
   height: 90px;
   border: 0;
   outline: 0;
+  color: white;
   border-bottom: 1px solid rgb(30, 30, 30);
   resize: none;
   font-size: 20px;

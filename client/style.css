@@ -62,20 +62,13 @@ ul li a img {
   justify-content: space-between;
 }
 
-.logo,
-a {
+.logo {
   width: 90px;
   margin-right: 55px;
   color: white;
   font-family: "Corben", cursive;
   font-size: 25px;
   font-weight: 900;
-  text-decoration-line: none;
-}
-
-.logo,
-a:hover {
-  color: rgb(0, 106, 255);
 }
 
 .nav-left,
@@ -301,62 +294,6 @@ a:hover {
 .online-list .online::after {
   top: unset;
   bottom: 5px;
-}
-
-/* ---------------- POSTS.html RIGHT SIDEBAR ------- */
-.sidebar-title-blog {
-  color: #236ab9;
-  font-family: ‘Corben’, cursive;
-  border-bottom: #595959;
-  display: inline-block;
-}
-
-.sidebar-title-blog h3 {
-  text-align: center;
-}
-
-.sidebar-title-blog a {
-  font-size: 12px;
-  text-decoration: none;
-  color: #1876f2;
-}
-
-.blogpost-title {
-  color: #fc7307;
-  border-bottom: #595959;
-  display: flex;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.blogpost-title h4 {
-  font-size: 14px;
-}
-
-.blogpost-title span {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #236ab9;
-  color: white;
-  font-size: 10px;
-  padding: 4px 0;
-  text-align: center;
-}
-
-.blogpost-title a {
-  font-size: 12px;
-  text-decoration: none;
-  color: #1876f2;
-}
-
-.blog-post-cover {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  margin-top: 5px;
-  border-radius: 4px;
 }
 
 /* ------------------ main content ------------- */
@@ -1152,7 +1089,7 @@ textarea {
   left: 40px;
 }
 
-/*----------- Calendar Styling ------------*/
+/* Calendar Styling */
 
 .right-sidebar {
   font-family: "poppins", sans-serif;

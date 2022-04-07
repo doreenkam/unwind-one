@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 
     <script defer src="script.js"></script>
+    <script defer src="posts.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <!------------------ Navigation Bar ------------------>
     <nav>
         <div class="nav-left">
-            <div class="logo"><a class="logo" href="index.html">unwind</a></div>
+            <div class="logo" style="cursor: pointer;">unwind</div>
             <ul class="filter">
                 <li><a href="#"><img src="images/notif.png" alt="notifIcon"> </a></li>
                 <li><a href="#"><img src="images/inbox.png" alt="imagesIcon"> </a></li>
@@ -135,6 +136,7 @@
                         <!-- DATA -->
                         <label class="write-post-title" for="title"> Anonymous #ID </label>
 
+
                         <input type="text" name="title" id="titleForm" placeholder="username" required />
                     </div>
                     <!-- CONTENT -->
@@ -143,16 +145,16 @@
                         <label for="contentForm"></label>
                         <br>
 
-                        
+
                         <textarea id="contentForm" rows="3" name="content" maxlength="150"
                             placeholder="What's on your mind? (max. 150 characters)" required> </textarea>
 
-                            <img id="gifImage" alt="" class="center">
+                        <img id="gifImage" alt="" class="center">
                         <label id="gifTitle" for="gif"></label>
                         <input type="text" id="inputGiphy" placeholder="Search for GIFs">
 
                         <div id="giphyButton" class="giphyButton" value="Giphy!" onclick="sendApiRequest()"></div>
-                        
+
                         <br>
 
                     </div>
@@ -191,7 +193,7 @@
                     <!------- Reaction Buttons -------->
                     <div id="reactioBar0" class="activity-icons">
 
-                        <div class="like__btn">
+                        <!-- <div class="like__btn">
                             <p><span id="like"><i class="far fa-thumbs-up"></i></span>
                                 <span id="count">0</span>
                             </p>
@@ -207,7 +209,7 @@
                                 <span id="dislike"><i class="fas fa-heart"></i></span>
                                 <span id="count">0</span>
                             </p>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="post-profile-icon">
@@ -238,26 +240,6 @@
 
 
                     <!------- Reaction Buttons -------->
-                    <div id="reactioBar0" class="activity-icons">
-
-                        <div class="like__btn">
-                            <p><span id="like"><i class="far fa-thumbs-up"></i></span>
-                                <span id="count">0</span>
-                            </p>
-                        </div>
-                        <div class="dislike__btn">
-                            <p>
-                                <span id="dislike"><i class="fas fa-thumbs-down"></i></span>
-                                <span id="count">0</span>
-                            </p>
-                        </div>
-                        <div class="love__btn">
-                            <p>
-                                <span id="dislike"><i class="fas fa-heart"></i></span>
-                                <span id="count">0</span>
-                            </p>
-                        </div>
-                    </div>
 
                     <div class="post-profile-icon">
                         <img src="images/user.png"> <i class="fas fa-caret-down"></i>
@@ -282,29 +264,6 @@
                 <img src="images/alien-meme.jpeg" class="post-img">
                 <div class="post-row">
                     <a href="#" class="viewComments">View all comments</a>
-
-
-                    <!------- Reaction Buttons -------->
-                    <div id="reactioBar0" class="activity-icons">
-
-                        <div class="like__btn">
-                            <p><span id="like"><i class="far fa-thumbs-up"></i></span>
-                                <span id="count">0</span>
-                            </p>
-                        </div>
-                        <div class="dislike__btn">
-                            <p>
-                                <span id="dislike"><i class="fas fa-thumbs-down"></i></span>
-                                <span id="count">0</span>
-                            </p>
-                        </div>
-                        <div class="love__btn">
-                            <p>
-                                <span id="dislike"><i class="fas fa-heart"></i></span>
-                                <span id="count">0</span>
-                            </p>
-                        </div>
-                    </div>
 
                     <div class="post-profile-icon">
                         <img src="images/user.png"> <i class="fas fa-caret-down"></i>

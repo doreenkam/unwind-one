@@ -71,6 +71,7 @@ ul li a img {
   font-family: "Corben", cursive;
   font-size: 25px;
   font-weight: 900;
+  text-decoration: none;
 }
 
 .nav-left,
@@ -300,64 +301,6 @@ ul li a img {
   top: unset;
   bottom: 5px;
 }
-
-/* ---------------- POSTS.html RIGHT SIDEBAR ------- */
-  .sidebar-title-blog{
-    color:#236AB9;
-    font-family: ‘Corben’, cursive;
-    border-bottom: #595959;
-    display: inline-block;
-  }
-
-  .sidebar-title-blog h3 {
-    text-align: center;
-  }
-
-  .sidebar-title-blog a {
-    font-size: 12px;
-    text-decoration: none;
-    color: #1876f2;
-  }
-
-  .blogpost-title{
-    color:#FC7307;
-    border-bottom: #595959;
-    display: flex;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-
-  .blogpost-title h4 {
-    font-size: 14px;
-  }
-
-  .blogpost-title span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #236ab9;
-    color: white;
-    font-size: 10px;
-    padding: 4px 0;
-    text-align: center;
-  }
-
-  .blogpost-title a {
-    font-size: 12px;
-    text-decoration: none;
-    color: #1876f2;
-  }
-
-  .blog-post-cover {
-    width:100%;
-    height:auto;
-    margin-bottom: 20px;
-    margin-top: 5px;
-    border-radius: 4px;
-  }
-
-  
 
 /* ------------------ main content ------------- */
 
@@ -1152,7 +1095,7 @@ textarea {
   left: 40px;
 }
 
-/*----------- Calendar Styling ------------*/
+/* Calendar Styling */
 
 .right-sidebar {
   font-family: "poppins", sans-serif;
@@ -1208,7 +1151,7 @@ textarea {
 
 /* --------- Reaction Button ---------*/
 
-#like {
+.like__btn {
   display: inline-block;
   position: relative;
   left: 160px;
@@ -1224,7 +1167,7 @@ textarea {
   cursor: pointer;
 }
 
-#like:hover {
+.like__btn:hover {
   background: #32bbff;
 }
 
@@ -1257,7 +1200,11 @@ textarea {
 }
 
 .dislike__btn:hover {
-  background: #ff3232;
+  background: #cd1d1d;
+}
+
+.love__btn:hover {
+  background: #ff3287;
 }
 
 /* Emoji Styling */
@@ -1279,21 +1226,21 @@ textarea {
   width: 30px;
 }
 /* ---Blog Styling --- */
-.sidebar-title-blog{
-color:#236AB9;
-font-family: 'Corben', cursive;
-border-bottom: #595959;
-display: inline-block;
+.sidebar-title-blog {
+  color: #236ab9;
+  font-family: "Corben", cursive;
+  border-bottom: #595959;
+  display: inline-block;
 }
 
-.blogpost-title{
-  color:#FC7307;
+.blogpost-title {
+  color: #fc7307;
   border-bottom: #595959;
 }
 
-.blog-post-cover{
-  width:100%;
-  height:auto;
+.blog-post-cover {
+  width: 100%;
+  height: auto;
   margin-bottom: 20px;
   margin-top: 5px;
   border-radius: 4px;

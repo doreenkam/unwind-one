@@ -40,47 +40,41 @@ function displayPosts(posts) {
       .catch(function () {
         console.log("No GIF entry");
       });
-    //reaction bar//
-    const reactionBar = document.createElement("div");
-    reactionBar.setAttribute("id", `reactionBar${post.id}`);
-    article.append(reactionBar);
+    // Reaction Button //
+    const reactionBtns = document.createElement("div");
+    reactionBtns.setAttribute("id", `reactionBtns${post.id}`);
+    article.append(reactionBtns);
 
-    //like//
+    // Like Button //
     const like = document.createElement("button");
     like.setAttribute("id", `like${post.id}`);
     like.setAttribute("class", "fas fa-thumbs-up");
     like.textContent = ` ${post.reaction.like}`;
-    reactionBar.append(like);
+    reactionBtns.append(like);
     reactionCount(like, post.reaction.like, post.id, "like");
 
-    //clap//
-    const clap = document.createElement("button");
-    clap.setAttribute("id", `clap${post.id}`);
-    clap.setAttribute("class", "fas fa-sign-language");
-    clap.textContent = ` ${post.reaction.clap}`;
+    // Dislike Button //
+    const dislike = document.createElement("button");
+    clap.setAttribute("id", `dislike${post.id}`);
+    clap.setAttribute("class", "fas fa-thumbs-down");
+    clap.textContent = ` ${post.reaction.dislike}`;
+    reactionBtns.append(dislike);
+    reactionCount(dislike, post.reaction.dislike, post.id, "dislike");
 
-    clap.addEventListener("mouseover", function (event) {
-      event.target.style.backgroundolor = "rgb(235,219,195)";
-    });
-
-    reactionBar.append(clap);
-    reactionCount(clap, post.reaction.clap, post.id, "clap");
-
-    //love//
+    // Heart Button //
     const love = document.createElement("button");
     love.setAttribute("id", `love${post.id}`);
     love.textContent = ` ${post.reaction.love}`;
     love.setAttribute("class", "fas fa-heart");
-
     reactionBar.append(love);
     reactionCount(love, post.reaction.love, post.id, "love");
 
-    //comments Area//
+    // Comments Area//
     const commentsArea = document.createElement("div");
     commentsArea.setAttribute("class", "commentsArea");
     article.append(commentsArea);
 
-    //published comments
+    // Published Comments
     const publishedComments = document.createElement("div");
     publishedComments.setAttribute("id", `publishedComments${post.id}`);
     commentsArea.append(publishedComments);
@@ -90,25 +84,25 @@ function displayPosts(posts) {
     commentHeader.textContent = "Comments";
     publishedComments.append(commentHeader);
 
-    //print each comment
+    // For printing the comments
     for (const comment of post.comments) {
       const commentP = document.createElement("p");
       commentP.textContent = comment;
       publishedComments.append(commentP);
     }
 
-    //create form to add comments
+    // For to add commentss
     const commentForm = document.createElement("form");
     commentForm.setAttribute("id", `commentForm${post.id}`);
     commentsArea.append(commentForm);
 
-    //Text area input label
+    // Input label for the text ar
     const commentLabel = document.createElement("label");
     commentLabel.setAttribute("id", `commentLabel${post.id}`);
     commentLabel.setAttribute("for", `commentInput${post.id}`);
     commentForm.append(commentLabel);
 
-    //Text area input
+    // Text input input
     const commentInput = document.createElement("textarea");
     commentInput.setAttribute("id", `commentInput${post.id}`);
     commentInput.setAttribute("name", `commentInput${post.id}`);

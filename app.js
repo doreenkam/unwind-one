@@ -4,7 +4,6 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const app = express();
-const port = process.env.PORT || 3000;
 
 let posts = require("./database.json");
 let singlePostId;
@@ -45,9 +44,9 @@ app.use(express.json());
 app.use(bodyParser.text());
 
 // -----------> LISTEN TO SERVER --------------- //
-
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Unwind server running at http://localhost:${port}`);
+  console.log(`Unwind server running at ${port}`);
 });
 
 // ------------ ROUTES --------------- //

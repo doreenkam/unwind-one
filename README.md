@@ -22,7 +22,6 @@ A collaborative project from a team of associates at the futureproof Academy for
 
 Ever had those random thoughts that are on the borderline of a consipiracy or maybe the inner self talk that deserves external recoginition? Unwind is where you plant those seeds, safely and anonymously, for fellow curious minds to see!
 
-### Installation & Usage : ???
 
 ### Installation
 
@@ -115,9 +114,15 @@ We then collaborated on building a template of our desired website design using 
 - Dealing with diverged branches & having to rebase
 - Writing and passing tests
 
-### Code We Are Most Proud Of: ?????
+### Code We Are Most Proud Of: 
 
-CODE WE ARE MOST PROUD OF: ???
+Collectively, we are most proud of our HTML/CSS code as we spent a lot of time on it to reflect the vibe of our site - to reflect and wind your inner self talk. 
+
+![](/styling.png)
+
+Additionally we are proud of the code our app.js files and server side which enabled our server to run properly and helped to execute a lot of the functionality.
+
+![](/appJScode.png)
 
 ### Future Improvements:
 

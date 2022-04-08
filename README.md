@@ -116,7 +116,7 @@ We then collaborated on building a template of our desired website design using 
 
 ### Code We Are Most Proud Of: 
 
-Collectively, we are most proud of our HTML/CSS code as we spent a lot of time on it to reflect the vibe of our site - to reflect and wind your inner self talk. 
+Collectively, we are most proud of our HTML/CSS code as we spent a lot of time on it to reflect the vibe of our site - to reflect and unwind your inner self talk. 
 
 ![](/styling.png)
 

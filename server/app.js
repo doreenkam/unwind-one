@@ -133,5 +133,4 @@ app.post("/posts/newcomment", (req, res) => {
 //   res.send(JSON.stringify(posts[singlePostId]));
 // });
 
-
 module.exports = app;
